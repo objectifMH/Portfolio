@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Colors */ 
+$color_light: #2784ba;
+$color_dark: #1e5d86;
+$color_black: #19212c;
+$color_text: white;
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: 'Open Sans', sans-serif !important;
+
+}
+
+/* Responsive Styles */
+// @media screen and (max-width: 767px) {
+//     body {
+//         background: grey;
+//         color: yellow;
+//     }
+//   }
+
+// @media screen and (max-width: 575px) {
+//     body {
+//         background: white;
+//         color: purple !important;
+//     }
+//   }
+
+    

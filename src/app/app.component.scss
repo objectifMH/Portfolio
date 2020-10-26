@@ -1,0 +1,139 @@
+@import '../styles.scss';
+
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background-color: $color_light;
+    border-bottom: 2px solid grey;
+
+    nav {
+        color: $color_text;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo, .menu, .close{
+            color: $color_text;
+            font-size: 2em;
+            padding: 12px 6px;
+            text-shadow: rgba(0,0,0,.75) 2px 2px;   
+            cursor: pointer;
+        }
+
+        .logo {
+            font-weight: 600;
+        }
+
+        .menu, .close {
+            font-weight: bold;
+            font-size: 2.5em;
+
+            transition: .3s ease-in-out;
+            &:hover {
+                transform: scale(1.12);
+            }
+        }
+
+        .menu:before {
+            content: 'menu';
+        }
+
+        .close:before {
+            content: 'close';
+        }
+    }
+
+    .nav_menu.fade {
+        right: -100%;
+     }
+
+    .nav_menu {
+        background: linear-gradient(150deg, $color_light, $color_dark );
+        z-index: 1000;
+        width: 60vw;
+        position: fixed;
+        top: 0;
+        right: 0;
+        box-shadow: 3px 4px 12px rgba(0,0,0,.75);
+        transition: .5s ease-in-out;
+
+        .close {
+            font-size: 2.5em;
+            color: $color_text;
+            padding: 10px 20px;
+            text-shadow: rgba(0,0,0,.75) 2px 2px;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .portrait {
+            display: flex;
+            justify-content: center;
+            img {
+                max-width: 100px;
+                border-radius: 50%;
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0px 0px;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin: 15px 0px 25px;
+            
+
+            li {
+                color: white;
+                font-size: 1.4em;
+                font-weight: 600;
+                padding: 13px;
+                margin: 2px;
+                text-shadow: rgba(0, 0, 0, 0.75) 2px 2px;
+                transition: 0.45s ease-in-out;
+                cursor: pointer;
+                text-align: center;
+
+                &:hover {
+                    transform: scale(1.02);
+                    background-color: $color_text;
+                    color: #1e5d86;
+                    padding: 10px 15px;
+                    border-radius: 10px;
+                    text-shadow: white 2px 2px;
+                    box-shadow: rgba(0, 0, 0, 0.75) 2px 2px;
+                }
+            }
+        }
+
+        .reseaux {
+            a {
+                color: red;
+            }
+            .github {
+                color: $color_dark;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 321px) {
+    header {
+        background: purple !important;
+
+    } 
+
+}
