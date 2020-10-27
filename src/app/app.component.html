@@ -1,24 +1,42 @@
+<!-- Header  -->
 <header>
   <nav>
     <div class="logo">
-      M. HATCHI
+      <span class="material-icons">
+        arrow_back_ios
+      </span>
+      PORTFOLIO /
+      <span class="material-icons">
+        arrow_forward_ios
+      </span>
     </div>
     <div>
       <span class="material-icons menu"  (click)="getShowMenu()">
       </span>
     </div>
+    <ul class="nav_menu">
+      <li class="portrait">
+        <img src="../assets/admin/admin.jpg">
+      </li>
+      <li>Compétences</li>
+      <li>Expériences</li>
+      <li>Formation</li>
+      <li>Réalisations</li>
+    </ul>
   </nav>
+  <!-- Fin Header  -->
 
-  <div class="nav_menu" [ngClass]="{'show': isShowMenu, 'fade':!isShowMenu}">
+  <!-- Menu mobile  -->
+  <div class="nav_menu_mobile" [ngClass]="{'show': isShowMenu, 'fade':!isShowMenu}">
     <div >
       <span class="material-icons close" (click)="getShowMenu()">close</span>
     </div>
     <div class="portrait">
       <img src="../assets/admin/admin.jpg">
+      <h2>M. HATCHI</h2>
     </div>
 
     <ul>
-      <li>Maison</li>
       <li>A&nbsp;propos</li>
       <li>Compétences</li>
       <li>Expériences</li>
@@ -34,16 +52,62 @@
       </a>
     </div>
   </div>
+  <!-- Fin Menu mobile  -->
 </header>
 
+<!-- Contenu principal -->
 <main>
+  <div class="introduction container">
+    <div class="presentation">
+      <h1>M.&nbsp;HATCHI</h1>
+      <h2>Developpeur Web</h2>
+    </div>
+    <div class="portrait">
+      <img src="../assets/admin/admin.jpg">
+      <div class="reseau">
+        <a href='https://www.linkedin.com/in/m-hatchi-bb4b49156/' title="Linkedin" target="_blank">
+          <fa-icon class="linkedinin" [icon]="faLinkedinIn"></fa-icon>
+        </a>
+        <a href='https://github.com/objectifMH/pokemirroor' target="_blank" title="Github">
+          <fa-icon class="github" [icon]="faGithub"></fa-icon>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <div _ngcontent-yyh-c10="" class="container_headline_section background_linear height_500">
+    <div _ngcontent-yyh-c10="" class="headline_section container">
+      <p _ngcontent-yyh-c10="" class="headline_first text-primary">Ma Formation</p>
+      <h2 _ngcontent-yyh-c10="">En trois points</h2>
+    </div>
+  </div>
+
+  <div _ngcontent-yyh-c10="" class="container_headline_section height_250 ">
+    <div _ngcontent-yyh-c10="" class="headline_section container">
+      <p _ngcontent-yyh-c10="" class="headline_first text-primary">Mes Compétences</p>
+      <h2 _ngcontent-yyh-c10="">En trois points</h2>
+    </div>
+  </div>
+
+  <div _ngcontent-yyh-c10="" class="container_headline_section background_linear height_300 width_80">
+    <div _ngcontent-yyh-c10="" class="headline_section container">
+      <p _ngcontent-yyh-c10="" class="headline_first text-primary">Expériences</p>
+      <h2 _ngcontent-yyh-c10="">En trois points</h2>
+    </div>
+  </div>
+
+  <div _ngcontent-yyh-c10="" class="container_headline_section height_500">
+    <div _ngcontent-yyh-c10="" class="headline_section container">
+      <p _ngcontent-yyh-c10="" class="headline_first text-primary">Projets</p>
+      <h2 _ngcontent-yyh-c10="">En trois points</h2>
+    </div>
+  </div>
 
 
 
 </main>
+<!-- Fin Contenu principal -->
 
+<!-- Footer -->
 <footer>
-
-
-
 </footer>
