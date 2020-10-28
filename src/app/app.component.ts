@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import * as AOS from 'aos'; 
 
 @Component({
   selector: 'app-root',
@@ -14,10 +15,27 @@ export class AppComponent {
   faGithub = faGithub;
   
   
+  ngOnInit() {
+    this.isShowMenu = false;
+    AOS.init();
+  }
+
   getShowMenu() {
     this.isShowMenu = !this.isShowMenu;
     console.log(this.isShowMenu);
   }
+
+  @HostListener('window:scroll', ['$event'])
+  
+  onWindowScroll(e) {
+      let element = document.querySelector('header');
+      if (window.pageYOffset > element.clientHeight) {
+        element.classList.add('opacity_true');
+        //Scrolling 
+      } else {
+        element.classList.remove('opacity_true');
+      }
+    }
 
   
 

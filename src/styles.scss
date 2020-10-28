@@ -10,11 +10,25 @@ html, body { height: 100%; }
 body { 
     margin: 0; 
     font-family: 'Open Sans', sans-serif !important;
+    //overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif !important;
 }
+
+.background_linear {
+    background: linear-gradient(150deg, $color_light, $color_dark );
+}
+
+.background_linear_light {
+    background: linear-gradient(150deg,#289bc2, #279cc4);
+}
+
+a {
+    text-decoration: none;
+}
+
 
 /* Responsive Styles */
 // @media screen and (max-width: 767px) {

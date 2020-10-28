@@ -16,38 +16,60 @@
     </div>
     <ul class="nav_menu">
       <li class="portrait">
-        <img src="../assets/admin/admin.jpg">
+        <a [routerLink]="['/main']" fragment="presentation">
+          <img src="../assets/admin/admin.jpg">
+        </a>
       </li>
-      <li>Compétences</li>
-      <li>Expériences</li>
-      <li>Formation</li>
-      <li>Réalisations</li>
+      <li>
+        <a [routerLink]="['/main']" fragment="competences">
+          Compétences
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/main']" fragment="experience">Expériences</a>
+      </li>
+      <li>
+        <a [routerLink]="['/main']" fragment="formations">Formations</a>  
+      </li>
+      <li>
+        <a [routerLink]="['/main']" fragment="realisations">Réalisations</a>
+      </li>
     </ul>
   </nav>
   <!-- Fin Header  -->
 
   <!-- Menu mobile  -->
-  <div class="nav_menu_mobile" [ngClass]="{'show': isShowMenu, 'fade':!isShowMenu}">
+  <div class="nav_menu_mobile fade" [ngClass]="{'show': isShowMenu, 'fade':!isShowMenu}">
     <div >
       <span class="material-icons close" (click)="getShowMenu()">close</span>
     </div>
     <div class="portrait">
-      <img src="../assets/admin/admin.jpg">
-      <h2>M. HATCHI</h2>
+      <a [routerLink]="['/main']" fragment="presentation">
+        <img src="../assets/admin/admin.jpg">
+        <h2>M. HATCHI</h2>
+      </a>     
     </div>
 
     <ul>
       <li>A&nbsp;propos</li>
-      <li>Compétences</li>
-      <li>Expériences</li>
-      <li>Formation</li>
-      <li>Réalisations</li>
+      <li>
+        <a [routerLink]="['/main']" fragment="competences">Compétences</a>
+    </li>
+      <li>
+        <a [routerLink]="['/main']" fragment="experiences">Expériences</a>
+      </li>
+      <li>
+        <a [routerLink]="['/main']" fragment="formations">Formations</a>
+      </li>
+      <li>
+        <a [routerLink]="['/main']" fragment="realisations">Réalisations</a>
+      </li>
     </ul>
     <div class="reseaux">
       <a href='https://www.linkedin.com/in/m-hatchi-bb4b49156/' title="Linkedin" target="_blank">
           <fa-icon class="linkedinin" [icon]="faLinkedinIn"></fa-icon>
       </a>
-      <a href='https://github.com/objectifMH/pokemirroor' target="_blank" title="Github">
+      <a href='https://github.com/objectifMH/' target="_blank" title="Github">
           <fa-icon class="github" [icon]="faGithub"></fa-icon>
       </a>
     </div>
@@ -57,51 +79,207 @@
 
 <!-- Contenu principal -->
 <main>
-  <div class="introduction container">
-    <div class="presentation">
-      <h1>M.&nbsp;HATCHI</h1>
-      <h2>Developpeur Web</h2>
-    </div>
-    <div class="portrait">
-      <img src="../assets/admin/admin.jpg">
-      <div class="reseau">
-        <a href='https://www.linkedin.com/in/m-hatchi-bb4b49156/' title="Linkedin" target="_blank">
-          <fa-icon class="linkedinin" [icon]="faLinkedinIn"></fa-icon>
-        </a>
-        <a href='https://github.com/objectifMH/pokemirroor' target="_blank" title="Github">
-          <fa-icon class="github" [icon]="faGithub"></fa-icon>
-      </a>
+
+  <!-- introduction  -->
+  <div class="introduction container-fluid background_linear_light" id="presentation">
+    <div class="presentation_portrait">
+      <div class="presentation" >
+        <h1 data-aos="fade-left" data-aos-duration="2000">M.&nbsp;HATCHI</h1>
+        <h2 data-aos="fade-right" data-aos-duration="2000">Developpeur Web</h2>
+      </div>
+      <div class="portrait" data-aos="fade-down" data-aos-duration="2000">
+        <img src="../assets/admin/admin.jpg">
+      </div>
+    </div> 
+    <div class="infos_personnelles container background_linear ">
+      <div class="container_infos_personnelles">
+        <div >
+          <span class="material-icons">
+            location_on
+          </span>
+          <p>
+            32, Avenue Charles&nbsp;Flahaut
+            <br/>
+            Résidence "Val&nbsp;Fleury&nbsp;II"  
+            <br/>
+            34090, Montpellier
+          </p>
+        </div>
+        <div >
+          <span class="material-icons">
+            phone
+          </span>
+          <p>
+            +33 (0)6 87 43 57 61
+          </p>
+        </div>
+        <div >
+          <a href="mailto:mhatchi@yahoo.fr">
+            <span class="material-icons">
+              mail
+            </span>
+          </a>
+          <p>
+            mhatchi@yahoo.fr
+          </p>
+        </div> 
+        <div >
+          <a href='https://www.linkedin.com/in/m-hatchi-bb4b49156/' title="Linkedin" target="_blank">
+            <fa-icon class="linkedinin" [icon]="faLinkedinIn"></fa-icon>
+          </a>
+          <p>
+            M Hatchi
+          </p>
+        </div>
+        <div >
+          <a href='https://github.com/objectifMH/' target="_blank" title="Github">
+            <fa-icon class="github" [icon]="faGithub"></fa-icon>
+          </a>
+          <p>
+            github.com/objectifMH
+          </p>
+        </div>
+        
+
       </div>
     </div>
   </div>
+  <!-- Fin introduction  -->
 
-  <div _ngcontent-yyh-c10="" class="container_headline_section background_linear height_500">
-    <div _ngcontent-yyh-c10="" class="headline_section container">
-      <p _ngcontent-yyh-c10="" class="headline_first text-primary">Ma Formation</p>
-      <h2 _ngcontent-yyh-c10="">En trois points</h2>
+  <!-- Compétences  -->
+  <div class="headline_section container" id="competences" >
+    <div class="container_headline_section">
+      <h2 >
+        <span class="material-icons emoji_bulb">
+          emoji_objects
+        </span>
+          Compétences
+      </h2>
+      <p>Front end</p>  
+    </div>
+    <div class="container_front" >
+      <div data-aos="fade-left" data-aos-duration="2000">
+        <img src="../assets/angular.png" >
+        <p class="titre">
+          Angular
+        </p>
+      </div>
+      <div>
+        <img src="../assets/react.png" >
+        <p class="titre">
+          React
+        </p>
+      </div>
+      <div>
+        <img src="../assets/js.png" >
+        <p class="titre">
+          JavaScript
+        </p>
+      </div>
+      <div>
+        <img src="../assets/Jquery.png" >
+        <p class="titre">
+          jQuery
+        </p>
+      </div>
+      <div>
+        <img src="../assets/html5.png" >
+        <p class="titre">
+          HTML5
+        </p>
+      </div>
+      <div data-aos="fade-right" data-aos-duration="2000">
+        <img src="../assets/CSS3.png" class="css" >
+        <p class="titre">
+          CSS3
+        </p>
+      </div>
+    </div>
+
+    <div class="container_headline_section">
+      <p>Back end</p>  
+    </div>
+    <div class="container_back" >
+      <div data-aos="fade-left" data-aos-duration="2000">
+        <img src="../assets/Java.svg"  class="java">
+        <p class="titre">
+          Java
+        </p>
+      </div>
+      <div>
+        <img src="../assets/spring.png" >
+        <p class="titre">
+          Spring
+        </p>
+      </div>
+      <div data-aos="fade-right" data-aos-duration="2000">
+        <img src="../assets/php.png" >
+        <p class="titre">
+          PHP
+        </p>
+      </div>
+    </div>
+
+    <div class="container_headline_section">
+      <p>Administration de bases de données</p>  
+    </div>
+    <div class="container_back" >
+      <div data-aos="fade-left" data-aos-duration="2000">
+        <img src="../assets/MySQL.png">
+        <p class="titre">
+          MySQL
+        </p>
+      </div>
+      <div>
+        <img src="../assets/PhpMyA.png" >
+        <p class="titre php_post">
+          PHPMyAdmin
+        </p>
+      </div>
+      <div data-aos="fade-right" data-aos-duration="2000">
+        <img src="../assets/pgsql.svg.png" >
+        <p class="titre php_post">
+          PostGreSQL
+        </p>
+      </div>
+      <div data-aos="fade-right" data-aos-duration="2000">
+        <img src="../assets/Hibernate.png" >
+        <p class="titre ">
+          Hibernate
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Fin Compétences  -->
+
+
+
+  <div class="container headline_section" id="formations" >
+    <div class="container_headline_section">
+      <h2>
+        <span class="material-icons emoji_bulb">
+          school
+        </span>
+          Formations
+      </h2>
+      <p>Front end</p>  
     </div>
   </div>
 
-  <div _ngcontent-yyh-c10="" class="container_headline_section height_250 ">
-    <div _ngcontent-yyh-c10="" class="headline_section container">
-      <p _ngcontent-yyh-c10="" class="headline_first text-primary">Mes Compétences</p>
-      <h2 _ngcontent-yyh-c10="">En trois points</h2>
+  <div class="container headline_section">
+    <div class="container_headline_section">
+      <h2>
+        <span class="material-icons emoji_bulb">
+          construction
+        </span>
+          Réalisations
+      </h2>
+      <p>Front end</p>  
     </div>
   </div>
 
-  <div _ngcontent-yyh-c10="" class="container_headline_section background_linear height_300 width_80">
-    <div _ngcontent-yyh-c10="" class="headline_section container">
-      <p _ngcontent-yyh-c10="" class="headline_first text-primary">Expériences</p>
-      <h2 _ngcontent-yyh-c10="">En trois points</h2>
-    </div>
-  </div>
 
-  <div _ngcontent-yyh-c10="" class="container_headline_section height_500">
-    <div _ngcontent-yyh-c10="" class="headline_section container">
-      <p _ngcontent-yyh-c10="" class="headline_first text-primary">Projets</p>
-      <h2 _ngcontent-yyh-c10="">En trois points</h2>
-    </div>
-  </div>
+  
 
 
 
