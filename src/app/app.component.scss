@@ -391,7 +391,7 @@ main {
                             width: 100%;
                             font-size: 1.8em;
                             font-weight: bold;
-                            background: linear-gradient(150deg, #007bff, rgba(0,0,0,.26));
+                            background: linear-gradient(150deg, #dee2e6, rgba(0, 0, 0, 0.26));
                             position: absolute;
                             display: flex;
                             justify-content: center;
@@ -400,7 +400,7 @@ main {
                             color: $color_text;
                             padding-top: 5px;
                             box-shadow: 2px 3px 10px rgba(0,0,0,.75);
-
+                            text-shadow: 2px 2px 1px grey;
                         }
 
                         .titre.php_post {
