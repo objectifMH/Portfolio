@@ -26,10 +26,10 @@
         </a>
       </li>
       <li>
-        <a [routerLink]="['/main']" fragment="experience">Expériences</a>
+        <a [routerLink]="['/main']" fragment="formations">Formations</a>
       </li>
       <li>
-        <a [routerLink]="['/main']" fragment="formations">Formations</a>  
+        <a [routerLink]="['/main']" fragment="publication">Publication</a>
       </li>
       <li>
         <a [routerLink]="['/main']" fragment="realisations">Réalisations</a>
@@ -55,11 +55,11 @@
       <li>
         <a [routerLink]="['/main']" fragment="competences">Compétences</a>
     </li>
+    <li>
+      <a [routerLink]="['/main']" fragment="formations">Formations</a>
+    </li>
       <li>
-        <a [routerLink]="['/main']" fragment="experiences">Expériences</a>
-      </li>
-      <li>
-        <a [routerLink]="['/main']" fragment="formations">Formations</a>
+        <a [routerLink]="['/main']" fragment="publication">Publication</a>
       </li>
       <li>
         <a [routerLink]="['/main']" fragment="realisations">Réalisations</a>
@@ -155,10 +155,40 @@
         </span>
           Compétences
       </h2>
+    </div>
+
+    <div class="container_competences" >
+      <div class="background_linear">
+        <span class="material-icons">
+          api
+        </span>
+        <p>
+          Réalisation et conception d'APi REST, CRUD. 
+        </p>
+      </div>
+      <div class="background_linear">
+        <span class="material-icons">
+          web
+        </span>
+        <p>
+          Réalisation et conception d'interface Web.
+        </p>
+      </div>
+      <div class="background_linear">
+        <span class="material-icons">
+          storage
+        </span>
+        <p>
+          Gestion et administration des bases de données.
+        </p>
+      </div>
+    </div>
+
+    <div class="container_headline_section">
       <p>Front end</p>  
     </div>
     <div class="container_front" >
-      <div data-aos="fade-down" data-aos-duration="2000">
+      <div data-aos="" data-aos-duration="2000">
         <img src="assets/angular.png" >
         <p class="titre">
           Angular
@@ -188,7 +218,7 @@
           HTML5
         </p>
       </div>
-      <div data-aos="fade-right" data-aos-duration="2000">
+      <div data-aos="" data-aos-duration="2000">
         <img src="assets/CSS3.png" class="css" >
         <p class="titre">
           CSS3
@@ -200,7 +230,7 @@
       <p>Back end</p>  
     </div>
     <div class="container_back" >
-      <div data-aos="fade-up" data-aos-duration="2000">
+      <div data-aos="" data-aos-duration="2000">
         <img src="assets/Java.svg"  class="java">
         <p class="titre">
           Java
@@ -212,7 +242,7 @@
           Spring
         </p>
       </div>
-      <div data-aos="fade-down" data-aos-duration="2000">
+      <div data-aos="" data-aos-duration="2000">
         <img src="assets/php.png" >
         <p class="titre">
           PHP
@@ -223,8 +253,8 @@
     <div class="container_headline_section">
       <p>Administration de bases de données</p>  
     </div>
-    <div class="container_back" >
-      <div data-aos="fade-down" data-aos-duration="2000">
+    <div class="container_bdd" >
+      <div data-aos="" data-aos-duration="2000">
         <img src="assets/MySQL.png">
         <p class="titre">
           MySQL
@@ -242,7 +272,7 @@
           PostGreSQL
         </p>
       </div>
-      <div data-aos="fade-up" data-aos-duration="2000">
+      <div data-aos="" data-aos-duration="2000">
         <img src="assets/Hibernate.png" >
         <p class="titre ">
           Hibernate
@@ -252,29 +282,81 @@
   </div>
   <!-- Fin Compétences  -->
 
+<!-- Formations  -->
+<div class="container headline_section" id="formations" >
+  <div class="container_headline_section">
+    <h2>
+      <span class="material-icons emoji_bulb">
+        school
+      </span>
+        Formations
+    </h2>
+  </div>
 
+  <div class="container_formations" >
+    <div data-aos="flip-down" data-aos-duration="2000">
+      <img src="assets/epsi.png">
+      <p class="titre">
+        POE Java Full &nbsp;Stack, Java, JEE, Angular.
+      </p>
+      <span class="background_linear">
+        Epsi Montpellier - 2019
+      </span>
+    </div>
 
-  <div class="container headline_section" id="formations" >
+    <div data-aos="flip-down" data-aos-duration="2000">
+      <img src="assets/o3w.png">
+      <p class="titre">
+        Titre professionnel “Développeur&nbsp;logiciel” de niveau&nbsp;III, Objectif&nbsp;3W.
+      </p>
+      <span class="background_linear">Objectif3W - 2017</span>
+    </div>
+
+    <div data-aos="flip-down" data-aos-duration="2000">
+      <img src="assets/um2.png">
+      <p class="titre">
+        Master &nbsp;II mention Informatique spécialité Intégration des Compétences.
+      </p>
+      <span class="background_linear">Université Montpellier II - 2010</span>
+    </div>
+  </div>
+</div>
+<!-- Fin Formations  -->
+
+<!-- Publication  -->
+<div class="container-fluid background_linear_light">
+  <div class="container headline_section" id="publication">
     <div class="container_headline_section">
       <h2>
         <span class="material-icons emoji_bulb">
-          school
+          menu_book
         </span>
-          Formations
+          Publication
       </h2>
-      <p>Front end</p>  
-    </div>
+      <div class="container_publication">
+        <a href="https://hal.archives-ouvertes.fr/lirmm-00816301" target="_blank" >
+          <p>Regroupement des Définitions de Sigles Biomédicaux
+          </p>  
+        </a>
+        <span class="titre">RNTI - Revue des Nouvelles Technologies de l'Information (ISSN : 1764-1667)</span>
+        <br>
+        <span class="auteurs">Ousmane Djanga , Hanine Hamzioui , Michaël Hatchi , Isabelle Mougenot , Mathieu Roche </span>
+      </div>
+      </div>
   </div>
+</div>
+<!-- Fin Publication  -->
+
 
   <div class="container headline_section">
-    <div class="container_headline_section">
+    <div class="container_headline_section"  id="realisations">
       <h2>
         <span class="material-icons emoji_bulb">
           construction
         </span>
           Réalisations
       </h2>
-      <p>Front end</p>  
+      <p>Angular, React, Spring Boot</p>  
     </div>
   </div>
 

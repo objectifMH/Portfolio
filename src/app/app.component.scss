@@ -322,16 +322,16 @@ main {
     
     
     .headline_section {
-        padding: 90px 25px 35px;
+        padding: 80px 0px 40px;
         font-family: Poppins,sans-serif;
-        margin-bottom: 50px;
 
         .container_headline_section p {
             text-transform: uppercase;
-            color: $color_dark !important;
+            color: $color_dark;
             margin-bottom: 0;
             letter-spacing: .2em;
             font-weight: 700;
+            font-size: 1.4em;
         }
 
         .container_headline_section h2 {
@@ -353,7 +353,42 @@ main {
             }
         }  
         
-        .container_front, .container_back {
+        .container_competences {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+                border-radius: 4px;
+                padding: 20px;
+                margin: 10px;
+                
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 5em;
+                    color: $color_text;
+                    padding: 30px;
+                }
+
+                p {
+                    font-size: 1.4em;
+                    font-weight: bolder;
+                    color: white;
+                    text-align: center;
+                }
+            }           
+        }
+
+        .container_front, .container_back, .container_bdd {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -432,27 +467,66 @@ main {
             }
         }
 
+        .container_formations {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                border-radius: 4px;
+                box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+                margin: 10px;
+
+                img {
+                    height: 120px;
+                    padding: 10px !important;
+                }
+
+                p {
+                    font-size: 1.4em;
+                    padding: 20px 10px;
+                    text-align: center;
+                }
+
+                span {
+                    font-size: 1em;
+                    color: white;
+                    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+                    padding: 5px 15px;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+
+        .container_publication {
+            margin-top: 25px;
+
+            a {
+                p {
+                    color: $color_text;
+                    font-size: 1.6em;
+                }
+            }
+            
+            .titre {
+                color: black;
+                font-size: 1.4em;
+                font-weight: bolder;
+            }
+
+            .auteurs {
+                color: $color_dark;
+                font-size: 1.2em;
+            }
+        }
+
 
     }
-
-
-    .height_500 {
-        height: 500px;
-    }
-
-    .height_400 {
-        height: 400px;
-    }
-
-    .height_250 {
-        height: 250px;
-    }
-
-    
-
-
-    /////
-
 }
 
 footer {
@@ -465,7 +539,38 @@ footer {
 
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 600px) {
+    main {  
+        .container_competences {
+            flex-direction: row !important;
+        } 
+
+        .container_formations {
+            div {
+                flex-direction: row !important;
+                position: relative;
+                margin: 15px !important;
+                img {
+                    padding: 4px;
+                }
+
+                p {
+                    text-align: left !important;
+                }
+
+                span {
+                    right: 14px;
+                    bottom: -11px;
+                    position: absolute;
+                    width: auto !important;
+                }
+            }
+
+        }
+    } 
+}
+
+@media screen and (min-width: 990px) {
     main {
         .introduction {
             //background: red;
@@ -524,6 +629,14 @@ footer {
                         font-size: 3.6em;
                         text-shadow: rgba(0,0,0,.75) 1px 1px;  
                         position: initial;
+                    }
+
+                    span {
+                        position: absolute;
+                        bottom: -1em;
+                        font-size: 1.4em;
+                        color: $color_text;
+                        
                     }
                 }
             }            
