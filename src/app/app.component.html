@@ -51,7 +51,6 @@
     </div>
 
     <ul>
-      <li>A&nbsp;propos</li>
       <li>
         <a [routerLink]="['/main']" fragment="competences">Compétences</a>
     </li>
@@ -79,6 +78,7 @@
 
 <!-- Contenu principal -->
 <main>
+  
 
   <!-- introduction  -->
   <div class="introduction container-fluid background_linear_light" id="presentation">
@@ -128,7 +128,7 @@
             <fa-icon class="linkedinin" [icon]="faLinkedinIn"></fa-icon>
           </a>
           <p>
-            M Hatchi
+            M. Hatchi
           </p>
         </div>
         <div >
@@ -146,9 +146,11 @@
   </div>
   <!-- Fin introduction  -->
 
+  <!-- <router-outlet></router-outlet> -->
+
   <!-- Compétences  -->
   <div class="headline_section container" id="competences" >
-    <div class="container_headline_section">
+    <div class=" container container_headline_section">
       <h2 >
         <span class="material-icons emoji_bulb">
           emoji_objects
@@ -184,7 +186,7 @@
       </div>
     </div>
 
-    <div class="container_headline_section">
+    <div class="container container_headline_section">
       <p>Front end</p>  
     </div>
     <div class="container_front" >
@@ -226,7 +228,7 @@
       </div>
     </div>
 
-    <div class="container_headline_section">
+    <div class="container container_headline_section">
       <p>Back end</p>  
     </div>
     <div class="container_back" >
@@ -250,7 +252,7 @@
       </div>
     </div>
 
-    <div class="container_headline_section">
+    <div class="container container_headline_section">
       <p>Administration de bases de données</p>  
     </div>
     <div class="container_bdd" >
@@ -284,7 +286,7 @@
 
 <!-- Formations  -->
 <div class="container headline_section" id="formations" >
-  <div class="container_headline_section">
+  <div class="container container_headline_section">
     <h2>
       <span class="material-icons emoji_bulb">
         school
@@ -325,7 +327,7 @@
 
 <!-- Publication  -->
 <div class="container-fluid background_linear_light">
-  <div class="container headline_section" id="publication">
+  <div class="container container headline_section" id="publication">
     <div class="container_headline_section">
       <h2>
         <span class="material-icons emoji_bulb">
@@ -334,22 +336,37 @@
           Publication
       </h2>
       <div class="container_publication">
-        <a href="https://hal.archives-ouvertes.fr/lirmm-00816301" target="_blank" >
+        
           <p>Regroupement des Définitions de Sigles Biomédicaux
           </p>  
-        </a>
+        
         <span class="titre">RNTI - Revue des Nouvelles Technologies de l'Information (ISSN : 1764-1667)</span>
-        <br>
+        
         <span class="auteurs">Ousmane Djanga , Hanine Hamzioui , Michaël Hatchi , Isabelle Mougenot , Mathieu Roche </span>
+        <div class="savoir_plus_publication_container">
+          <div class="btn  btn-primary savoir_plus_publication">
+            <a href="https://hal.archives-ouvertes.fr/lirmm-00816301" target="_blank" >
+              En savoir plus
+              <span class="material-icons arrow_right_alt">
+                arrow_right_alt
+              </span>
+            </a>
+          </div>
+        </div>
+        
       </div>
-      </div>
+      
+    </div>
+    
+    
+    
   </div>
 </div>
 <!-- Fin Publication  -->
 
 
   <div class="container headline_section">
-    <div class="container_headline_section"  id="realisations">
+    <div class="container container_headline_section"  id="realisations">
       <h2>
         <span class="material-icons emoji_bulb">
           construction
