@@ -79,8 +79,22 @@ export class TetrisComponent implements OnInit {
   }
 
   rotateTetromino() {
-    this.currentRotation === 3 ? this.currentRotation = 0 : this.currentRotation = this.currentRotation + 1;
-    return this.TheTetrominos[this.random][this.currentRotation];
+    //TheTetrominos = [this.lTetromino, this.zTetromino, this.tTetromino, this.oTetromino, this.iTetromino];
+    // this.currentRotation === 3 ? this.currentRotation = 0 : this.currentRotation = this.currentRotation + 1;
+    // console.log(0, this.currentRotation);
+    // return this.TheTetrominos[0][this.currentRotation];
+    let isAtLeftEdge = this.currentTetromino.some((index, pos) => (this.currentPosition + index) % this.width === 0);
+    let isAtRightEdge = this.currentTetromino.some((index, pos) => (this.currentPosition + index) % this.width === this.width - 1);
+   
+    if(!isAtLeftEdge && !isAtRightEdge){
+      this.currentRotation++
+      if (this.currentRotation === this.currentTetromino.length) {
+        this.currentRotation = 0
+      }
+      this.currentTetromino = this.TheTetrominos[this.random][this.currentRotation]
+      
+    }
+    return this.currentTetromino;
   }
 
   draw() {
@@ -111,7 +125,7 @@ export class TetrisComponent implements OnInit {
 
   moveDown() {
     this.undraw();
-    //this.currentPosition = this.currentPosition + this.width;
+    this.currentPosition = this.currentPosition + this.width;
     this.draw();
     this.freeze();
   }
@@ -151,6 +165,11 @@ export class TetrisComponent implements OnInit {
         });
       }
       this.currentPosition = isR ? this.currentPosition : this.currentPosition + 1;
+      if ( this.currentTetromino.some(
+        element => this.allDiv[element + this.currentPosition].classList.contains('block_wall')))
+        {
+          this.currentPosition--;
+        }
     }
 
     if (event.key === "ArrowLeft") {
@@ -167,6 +186,11 @@ export class TetrisComponent implements OnInit {
         });
       }
       this.currentPosition = isL ? this.currentPosition : this.currentPosition - 1;
+      if ( this.currentTetromino.some(
+            element => this.allDiv[element + this.currentPosition].classList.contains('block_wall')))
+            {
+              this.currentPosition++;
+            }
       
     }
 

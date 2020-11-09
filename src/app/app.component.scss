@@ -1,7 +1,7 @@
 @import '../styles.scss';
 
 
-#presentation, #competences, #experiences, #formations {
+#presentation, #competences, #experiences, #formations, #realisations {
     transition: .4s ease-in-out;
 } 
 
@@ -506,13 +506,11 @@ main {
             justify-content: center;
             flex-direction: column;
 
-        
             p {
                 color: $color_text;
                 font-size: 1.6em;
             }       
         
-            
             .titre {
                 color: black;
                 font-size: 1.4em;
@@ -524,7 +522,6 @@ main {
                 font-size: 1.2em;
             }
         
-
             .savoir_plus_publication_container {
                 display: flex;
                 justify-content: flex-end;
@@ -538,6 +535,62 @@ main {
                         justify-content: center;
                         align-items: center;
                         color: $color_text;
+                    }
+                }
+            }
+        }
+
+        .container_realisations {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .realisation {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+                border-radius: 4px;
+                padding: 20px;
+                margin: 10px;
+                background: linear-gradient(150deg,#289bc2, #279cc4);
+
+
+
+                h4 {
+                    text-transform: uppercase;
+                    color: $color_text;
+                    margin-bottom: 20px;
+                    letter-spacing: .2em;
+                    font-weight: 700;
+                    font-size: 1.6em;
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    color: $color_text;
+                    font-size: 1.4em;
+                    margin-top: 20px;
+                }
+                .savoir_plus_realisation_container {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin: 10px;
+                    width: 100%;
+
+                    .savoir_plus_realisation {
+                        color: $color_text;
+                        background: $color_dark;
+        
+                        a {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: $color_text;
+                        }
                     }
                 }
             }
@@ -631,7 +684,12 @@ footer {
                 margin: auto;
             }
         }  
-    } 
+
+        .container_realisations {
+            display: flex;
+            flex-direction: row !important;
+        } 
+    }
 }
 
 @media screen and (min-width: 1023px) {

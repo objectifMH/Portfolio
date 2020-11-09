@@ -76,8 +76,12 @@
   <!-- Fin Menu mobile  -->
 </header>
 
+
+
+
 <!-- Contenu principal -->
 <main>
+  <!-- <router-outlet></router-outlet> -->
   
 
   <!-- introduction  -->
@@ -145,8 +149,6 @@
     </div>
   </div>
   <!-- Fin introduction  -->
-
-  <!-- <router-outlet></router-outlet> -->
 
   <!-- Compétences  -->
   <div class="headline_section container" id="competences" >
@@ -327,7 +329,7 @@
 
 <!-- Publication  -->
 <div class="container-fluid background_linear_light">
-  <div class="container container headline_section" id="publication">
+  <div class="container headline_section" id="publication">
     <div class="container_headline_section">
       <h2>
         <span class="material-icons emoji_bulb">
@@ -335,13 +337,10 @@
         </span>
           Publication
       </h2>
-      <div class="container_publication">
-        
-          <p>Regroupement des Définitions de Sigles Biomédicaux
-          </p>  
-        
-        <span class="titre">RNTI - Revue des Nouvelles Technologies de l'Information (ISSN : 1764-1667)</span>
-        
+      <div class="container_publication">       
+        <p>Regroupement des Définitions de Sigles Biomédicaux
+        </p>   
+        <span class="titre">RNTI - Revue des Nouvelles Technologies de l'Information (ISSN : 1764-1667)</span>      
         <span class="auteurs">Ousmane Djanga , Hanine Hamzioui , Michaël Hatchi , Isabelle Mougenot , Mathieu Roche </span>
         <div class="savoir_plus_publication_container">
           <div class="btn  btn-primary savoir_plus_publication">
@@ -355,18 +354,16 @@
         </div>
         
       </div>
-      
-    </div>
-    
-    
-    
+    </div>  
   </div>
 </div>
 <!-- Fin Publication  -->
 
 
-  <div class="container headline_section">
-    <div class="container container_headline_section"  id="realisations">
+ <!-- Réalisation  -->
+  <div class="container">
+    <div class="container headline_section"  id="realisations">
+      <div class=" container_headline_section">
       <h2>
         <span class="material-icons emoji_bulb">
           construction
@@ -375,12 +372,52 @@
       </h2>
       <p>Angular, React, Spring Boot</p>  
     </div>
+    <div class="container_realisations"> 
+      <div class="realisation">
+        <h4>
+          8MirroorMedia
+        </h4>
+        <img src="assets/projets/8mirror.png" >
+        <p>
+          Spring Boot, Angular
+        </p>
+        <div class="savoir_plus_realisation_container">
+          <div class="btn  btn-primary savoir_plus_realisation">
+            <a href="https://objectifmh.github.io/MirroorMedia/#/home" target="_blank" >
+              En savoir plus
+              <span class="material-icons arrow_right_alt">
+                arrow_right_alt
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="realisation">
+        <h4>
+          PokeMirroor
+        </h4>
+        <img src="assets/projets/poke.png" >
+        <p>
+          Angular
+        </p>
+        <div class="savoir_plus_realisation_container">
+          <div class="btn  btn-primary savoir_plus_realisation">
+            <a href="https://objectifmh.github.io/pokemirroor/#/main" target="_blank" >
+              En savoir plus
+              <span class="material-icons arrow_right_alt">
+                arrow_right_alt
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+    </div>
   </div>
 
-
-  
-
-
+  <!-- Fin Réalisation  -->
 
 </main>
 <!-- Fin Contenu principal -->

@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 120px;
     
     //box-sizing: border-box;
     
@@ -44,8 +44,14 @@
         // box-sizing: border-box;
     }
 
+
+
     .block_down {
         background: black;
+    }
+
+    .block_wall {
+        background: brown;
     }
 
     .freeze {
