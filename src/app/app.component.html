@@ -34,6 +34,9 @@
       <li>
         <a [routerLink]="['/main']" fragment="realisations">Réalisations</a>
       </li>
+      <li>
+        <a [routerLink]="['/main']" fragment="contact">Me contacter</a>
+      </li>
     </ul>
   </nav>
   <!-- Fin Header  -->
@@ -63,6 +66,9 @@
       <li>
         <a [routerLink]="['/main']" fragment="realisations">Réalisations</a>
       </li>
+      <li>
+        <a [routerLink]="['/main']" fragment="contact">Me contacter</a>
+      </li>
     </ul>
     <div class="reseaux">
       <a href='https://www.linkedin.com/in/m-hatchi-bb4b49156/' title="Linkedin" target="_blank">
@@ -75,9 +81,6 @@
   </div>
   <!-- Fin Menu mobile  -->
 </header>
-
-
-
 
 <!-- Contenu principal -->
 <main>
@@ -94,57 +97,13 @@
       <div class="portrait" data-aos="fade-down" data-aos-duration="2000">
         <img src="assets/admin/admin.jpg">
       </div>
-    </div> 
+    </div>
     <div class="infos_personnelles container background_linear ">
       <div class="container_infos_personnelles">
-        <div >
-          <span class="material-icons">
-            location_on
-          </span>
-          <p>
-            32, Avenue Charles&nbsp;Flahaut
-            <br/>
-            Résidence "Val&nbsp;Fleury&nbsp;II"  
-            <br/>
-            34090, Montpellier
-          </p>
-        </div>
-        <div >
-          <span class="material-icons">
-            phone
-          </span>
-          <p>
-            +33 (0)6 87 43 57 61
-          </p>
-        </div>
-        <div >
-          <a href="mailto:mhatchi@yahoo.fr">
-            <span class="material-icons">
-              mail
-            </span>
-          </a>
-          <p>
-            mhatchi@yahoo.fr
-          </p>
-        </div> 
-        <div >
-          <a href='https://www.linkedin.com/in/m-hatchi-bb4b49156/' title="Linkedin" target="_blank">
-            <fa-icon class="linkedinin" [icon]="faLinkedinIn"></fa-icon>
-          </a>
-          <p>
-            M. Hatchi
-          </p>
-        </div>
-        <div >
-          <a href='https://github.com/objectifMH/' target="_blank" title="Github">
-            <fa-icon class="github" [icon]="faGithub"></fa-icon>
-          </a>
-          <p>
-            github.com/objectifMH
-          </p>
-        </div>
-        
+        <h4>
+          En recherche active, je suis disponible et prèt à intégrer une équipe dynamique pour développer des fonctionnalités au niveau du back comme du front.
 
+        </h4>
       </div>
     </div>
   </div>
@@ -352,7 +311,6 @@
             </a>
           </div>
         </div>
-        
       </div>
     </div>  
   </div>
@@ -377,7 +335,9 @@
         <h4>
           8MirroorMedia
         </h4>
-        <img src="assets/projets/8mirror.png" >
+        <div class="img_container">
+          <img src="assets/projets/8mirror.png" >
+        </div>
         <p>
           Spring Boot, Angular
         </p>
@@ -396,7 +356,9 @@
         <h4>
           PokeMirroor
         </h4>
-        <img src="assets/projets/poke.png" >
+        <div class="img_container">  
+          <img src="assets/projets/poke.png" >
+        </div>
         <p>
           Angular
         </p>
@@ -416,12 +378,77 @@
     </div>
     </div>
   </div>
-
   <!-- Fin Réalisation  -->
+
+  <!-- Contact  -->
+  <div class="container-fluid background_linear_light">
+    <div class="container headline_section" id="contact">
+      <div class="container_headline_section">
+        <h2>
+          <span class="material-icons emoji_bulb">
+            person
+          </span>
+            Me contacter
+        </h2>
+      </div>
+        <div class="container_contact">       
+          <div class="infos_personnelles container background_linear ">
+            <div class="container_infos_personnelles">
+            <div >
+              <span class="material-icons">
+                location_on
+              </span>
+              <p>
+                32,&nbsp;Avenue&nbsp;Charles&nbsp;Flahaut
+                <br/>
+                34090, Montpellier
+              </p>
+            </div>
+            <div >
+              <span class="material-icons">
+                phone
+              </span>
+              <p>
+                +33 (0)6 87 43 57 61
+              </p>
+            </div>
+            <div >
+              <a href="mailto:mhatchi@yahoo.fr">
+                <span class="material-icons">
+                  mail
+                </span>
+              </a>
+              <p>
+                mhatchi@yahoo.fr
+              </p>
+            </div> 
+            <div >
+              <a href='https://www.linkedin.com/in/m-hatchi-bb4b49156/' title="Linkedin" target="_blank">
+                <fa-icon class="linkedinin" [icon]="faLinkedinIn"></fa-icon>
+              </a>
+              <p>
+                M. Hatchi
+              </p>
+            </div>
+            <div >
+              <a href='https://github.com/objectifMH/' target="_blank" title="Github">
+                <fa-icon class="github" [icon]="faGithub"></fa-icon>
+              </a>
+              <p>
+                github.com/objectifMH
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <!-- Fin Contact -->
 
 </main>
 <!-- Fin Contenu principal -->
 
 <!-- Footer -->
 <footer>
+  © Tous droits réservés - 2020
 </footer>
