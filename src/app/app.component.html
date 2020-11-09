@@ -381,7 +381,7 @@
   <!-- Fin Réalisation  -->
 
   <!-- Contact  -->
-  <div class="container-fluid background_linear_light">
+  <div class="container-fluid ">
     <div class="container headline_section" id="contact">
       <div class="container_headline_section">
         <h2>
@@ -450,5 +450,35 @@
 
 <!-- Footer -->
 <footer>
-  © Tous droits réservés - 2020
+
+  <div class="nav_footer">
+    
+    <div class="portrait">
+      <a [routerLink]="['/main']" fragment="presentation">
+        <img src="assets/admin/admin.jpg">
+        <h2>M.&nbsp;HATCHI</h2>
+      </a>     
+    </div>
+
+    <ul>
+      <li>
+        <a [routerLink]="['/main']" fragment="competences">Compétences</a>
+    </li>
+    <li>
+      <a [routerLink]="['/main']" fragment="formations">Formations</a>
+    </li>
+      <li>
+        <a [routerLink]="['/main']" fragment="publication">Publication</a>
+      </li>
+      <li>
+        <a [routerLink]="['/main']" fragment="realisations">Réalisations</a>
+      </li>
+      <li>
+        <a [routerLink]="['/main']" fragment="contact">Me contacter</a>
+      </li>
+    </ul>
+  </div>
+  <p>
+    © Tous droits réservés - 2020
+  </p>
 </footer>

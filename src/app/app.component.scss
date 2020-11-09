@@ -664,19 +664,77 @@ main {
 }
 
 footer {
-    height: 80px;
+    height: 220px;
     background: $color_dark;
     color: $color_text;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
     font-size: larger;
-    
+
+    .nav_footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: $color_text;
+        margin-top: 40px;
+        width: 80%;
+
+        .portrait {
+            transition: 0.4s ease-in-out;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: $color_text;
+            }
+
+            img {
+                width: 80px;
+                border-radius: 50%;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                a {
+                    text-shadow: rgba(0,0,0,.75) 2px 2px;
+                }
+            }
+        }
+
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-end;
+            list-style: none;
+
+            a {
+                color: $color_text;
+            }
+
+            li {
+                margin: 5px;
+                transition: 0.4s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                    text-shadow: rgba(0,0,0,.75) 2px 2px;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 321px) {
 }
+
 
 @media screen and (min-width: 600px) {
     main {  
@@ -706,6 +764,48 @@ footer {
             }
         }
     } 
+
+    footer {
+        height: 220px;
+        background: $color_dark;
+        color: $color_text;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 40px;
+        font-size: larger;
+    
+        .nav_footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $color_text;
+            width: 80%;
+    
+            .portrait {
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    color: $color_text;
+                }
+    
+                img {
+                    width: 60px;
+                    border-radius: 50%;
+                }
+            }
+    
+            ul {
+                flex-direction: row; 
+            }
+        }
+    }
+
 }
 
 @media screen and (min-width: 990px) {
