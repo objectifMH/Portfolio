@@ -741,11 +741,18 @@ footer {
         background: linear-gradient(150deg, green, #1e5d86) !important;
         width: 90vw !important;
 
+        h2 {
+            font-size: 1.2em !important;
+        }
+        img {
+            width: 70px !important;
+        }
+
         ul {
             flex-direction: row !important;
 
             li {
-                font-size: 1.2em !important;
+                font-size: 1em !important;
             }
         }
     }
