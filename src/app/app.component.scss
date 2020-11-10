@@ -638,7 +638,7 @@ main {
                         }
             
                         p {
-                            width: 170px;
+                            width: 190px;
                         }
         
                         a {
@@ -664,7 +664,6 @@ main {
 }
 
 footer {
-    height: 220px;
     background: $color_dark;
     color: $color_text;
 
@@ -733,11 +732,15 @@ footer {
 }
 
 @media screen and (min-width: 321px) {
+    main {
+        background: green;
+    }
 }
 
 
 @media screen and (min-width: 600px) {
-    main {  
+    main { 
+        background: orange; 
         .container_competences {
             flex-direction: row !important;
         } 
@@ -769,7 +772,6 @@ footer {
         height: 220px;
         background: $color_dark;
         color: $color_text;
-    
         display: flex;
         justify-content: center;
         align-items: center;
@@ -805,11 +807,11 @@ footer {
             }
         }
     }
-
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 875px) {
     main {
+        background: red;
         .introduction {
         
             flex-direction: column !important;
@@ -864,7 +866,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1064px) {
     header {
         nav {
             .menu {
@@ -917,4 +919,8 @@ footer {
             }
         }
     } 
+
+    main {
+        background: black;
+    }
 }
