@@ -673,6 +673,7 @@ footer {
     flex-direction: column;
     margin-top: 40px;
     font-size: larger;
+    padding: 5px;
 
     .nav_footer {
         display: flex;
@@ -731,16 +732,33 @@ footer {
     }
 }
 
+@media screen and (max-height: 460px) and (min-width: 560px) {
+    
+    main {
+        //background: red;
+    }
+    .nav_menu_mobile {
+        background: linear-gradient(150deg, green, #1e5d86) !important;
+        width: 90vw !important;
+
+        ul {
+            flex-direction: row !important;
+
+            li {
+                font-size: 1.2em !important;
+            }
+        }
+    }
+
+}
+
 @media screen and (min-width: 321px) {
     main {
-        background: green;
     }
 }
 
-
 @media screen and (min-width: 600px) {
     main { 
-        background: orange; 
         .container_competences {
             flex-direction: row !important;
         } 
@@ -769,7 +787,6 @@ footer {
     } 
 
     footer {
-        height: 220px;
         background: $color_dark;
         color: $color_text;
         display: flex;
@@ -811,7 +828,6 @@ footer {
 
 @media screen and (min-width: 875px) {
     main {
-        background: red;
         .introduction {
         
             flex-direction: column !important;
@@ -921,6 +937,5 @@ footer {
     } 
 
     main {
-        background: black;
     }
 }
