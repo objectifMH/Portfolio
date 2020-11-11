@@ -85,19 +85,24 @@
 <!-- Contenu principal -->
 <main>
   <!-- <router-outlet></router-outlet> -->
-  
+
 
   <!-- introduction  -->
   <div class="introduction container-fluid background_linear_light" id="presentation">
-    <div class="presentation_portrait">
-      <div class="presentation" >
-        <h1 data-aos="fade-down" data-aos-duration="2000">M.&nbsp;HATCHI</h1>
-        <h2 data-aos="fade-up" data-aos-duration="2000">Developpeur Web</h2>
-      </div>
-      <div class="portrait" data-aos="fade-down" data-aos-duration="2000">
-        <img src="assets/admin/admin.jpg">
+    <div class="container_presentation"  (mouseover)="jerentre($event)" (mouseout)="jesors($event)" >
+      <div class="presentation_portrait"  >
+        <div class="presentation" >
+          <h1 data-aos="fade-down" data-aos-duration="2000">M.&nbsp;HATCHI</h1>
+          <h2 data-aos="fade-up" data-aos-duration="2000">Developpeur Web</h2>
+          <div class="full">Full </div>
+          <div class="stack">Stack</div>
+        </div>
+        <div class="portrait" data-aos="fade-down" data-aos-duration="2000">
+          <img src="assets/admin/admin.jpg" class="portrait_img">
+        </div>
       </div>
     </div>
+    
     <div class="infos_personnelles container background_linear ">
       <div class="container_infos_personnelles">
         <h4>
@@ -151,6 +156,7 @@
       <p>Front end</p>  
     </div>
     <div class=" container container_front" >
+      
       <div data-aos="" data-aos-duration="2000">
         <img src="assets/angular.png" >
         <p class="titre">
@@ -257,7 +263,7 @@
   </div>
 
   <div class=" container container_formations" >
-    <div data-aos="flip-down" data-aos-duration="2000">
+    <div data-aos="zoom-in-up" data-aos-duration="2000">
       <img src="assets/epsi.png">
       <p class="titre">
         POE Java Full &nbsp;Stack, Java, JEE, Angular.
@@ -267,7 +273,7 @@
       </span>
     </div>
 
-    <div data-aos="flip-down" data-aos-duration="2000">
+    <div data-aos="zoom-in-up" data-aos-duration="2000">
       <img src="assets/o3w.png">
       <p class="titre">
         Titre professionnel “Développeur&nbsp;logiciel” de niveau&nbsp;III, Objectif&nbsp;3W.
@@ -275,7 +281,7 @@
       <span class="background_linear">Objectif3W - 2017</span>
     </div>
 
-    <div data-aos="flip-down" data-aos-duration="2000">
+    <div data-aos="zoom-in-up" data-aos-duration="2000">
       <img src="assets/um2.png">
       <p class="titre">
         Master &nbsp;II mention Informatique spécialité Intégration des Compétences.
@@ -339,7 +345,7 @@
           <img src="assets/projets/8mirror.png" >
         </div>
         <p>
-          Spring Boot, Angular
+          Spring Boot, Angular, Bootstrap, Responsive
         </p>
         <div class="savoir_plus_realisation_container">
           <div class="btn  savoir_plus_realisation">
@@ -360,7 +366,7 @@
           <img src="assets/projets/poke.png" >
         </div>
         <p>
-          Angular
+          Angular, Bootstrap, Responsive
         </p>
         <div class="savoir_plus_realisation_container">
           <div class="btn  savoir_plus_realisation">
@@ -382,7 +388,7 @@
           <img src="assets/projets/react_movie.png" >
         </div>
         <p>
-          React, Redux
+          React, Redux, Bootstrap, Responsive
         </p>
         <div class="savoir_plus_realisation_container">
           <div class="btn  savoir_plus_realisation">
@@ -500,6 +506,6 @@
     </ul>
   </div>
   <span>
-    © Tous droits réservés - 2020
+    © M. Hatchi, Tous droits réservés - 2020
   </span>
 </footer>
