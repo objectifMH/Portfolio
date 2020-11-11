@@ -373,6 +373,7 @@ main {
                 border-radius: 4px;
                 padding: 20px;
                 margin: 10px;
+                transition: .3s ease-in-out;
                 
                 span {
                     display: flex;
@@ -388,6 +389,10 @@ main {
                     font-weight: bolder;
                     color: white;
                     text-align: center;
+                }
+
+                &:hover {
+                    transform:  scaleY(1.02) scaleZ(1.03);
                 }
             }           
         }

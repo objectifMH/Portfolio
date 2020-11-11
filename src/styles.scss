@@ -17,6 +17,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif !important;
 }
 
+.background_linear_invisible {
+    background-image: linear-gradient(to bottom, #f7faff, rgba(231, 234, 243, 0.5) 100%);
+    
+}
+
 .background_linear {
     background: linear-gradient(150deg, $color_light, $color_dark );
 }
