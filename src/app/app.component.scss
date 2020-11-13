@@ -423,13 +423,16 @@ main {
             justify-content: center;
             margin-top: 20px;
             margin-bottom: 30px;
+            
+            transform-style: preserve-3d;
+            perspective: 1000px;
 
             div {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.65);
                 border-radius: 4px;
                 padding: 20px;
                 margin: 10px;
@@ -452,7 +455,9 @@ main {
                 }
 
                 &:hover {
-                    transform:  scaleY(1.02) scaleZ(1.03);
+                    transform: translateZ(41px);
+                    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+
                 }
             }           
         }
@@ -465,8 +470,6 @@ main {
             align-items: center;
             margin-top: 20px;
             margin-bottom: 30px;
-
-            
 
             div {
                 display: flex;
@@ -496,7 +499,7 @@ main {
                             width: 100%;
                             font-size: 1.8em;
                             font-weight: bold;
-                            background: linear-gradient(150deg, $color_light, $color_dark );
+                            //background: linear-gradient(150deg, $color_light, $color_dark );
                             position: absolute;
                             display: flex;
                             justify-content: center;
@@ -625,7 +628,7 @@ main {
                 justify-content: center;
                 box-shadow: 1px 1px 5px rgba(1, 1, 1, 0.45);
                 border-radius: 4px;
-                padding: 20px;
+                padding: 10px;
                 margin: 10px;
                 background: linear-gradient(150deg,#289bc2, #279cc4);
 
@@ -661,7 +664,6 @@ main {
                 .savoir_plus_realisation_container {
                     display: flex;
                     justify-content: flex-end;
-                    margin: 10px;
                     width: 100%;
 
                     .savoir_plus_realisation {
@@ -690,9 +692,14 @@ main {
                     color: $color_text;
                     padding: 15px 0px 30px;
 
+                    transform-style: preserve-3d;
+                    perspective: 1000px;
+
                     &:hover {
                         .contact {
-                            transform: scale(1.15);
+                            transform: translateZ(90px);
+                            
+                            
                         }
                     }
             
