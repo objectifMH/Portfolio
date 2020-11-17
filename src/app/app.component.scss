@@ -660,6 +660,10 @@ main {
                     color: $color_text;
                     font-size: 1.4em;
                     margin-top: 20px;
+
+                    span {
+                        margin: 2px;
+                    }
                 }
                 .savoir_plus_realisation_container {
                     display: flex;
@@ -974,6 +978,9 @@ footer {
         .container_realisations {
             display: flex;
             flex-direction: row !important;
+            .realisation {
+                width: 30%;
+            }
         } 
     }
 }

@@ -6,7 +6,9 @@ $color_dark: #1e5d86;
 $color_black: #19212c;
 $color_text: white;
 
-html, body { height: 100%; }
+html, body { 
+    height: 100%;
+    scroll-behavior: smooth; }
 body { 
     margin: 0; 
     font-family: 'Open Sans', sans-serif !important;
