@@ -1,6 +1,7 @@
 import { Component, Directive, HostBinding, HostListener } from '@angular/core';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import * as AOS from 'aos';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 
 
@@ -18,6 +19,28 @@ export class AppComponent {
 
   x;
   y;
+
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      490: {
+        items: 2
+      },
+      940: {
+        items: 3
+      }
+    },
+    nav: true
+  }
 
 
   ngOnInit() {

@@ -11,7 +11,7 @@
       </span>
     </div>
     <div>
-      <span class="material-icons menu"  (click)="getShowMenu()">
+      <span class="material-icons menu" (click)="getShowMenu()">
       </span>
     </div>
     <ul class="nav_menu">
@@ -43,23 +43,23 @@
 
   <!-- Menu mobile  -->
   <div class="nav_menu_mobile fade" [ngClass]="{'show': isShowMenu, 'fade':!isShowMenu}">
-    <div >
+    <div>
       <span class="material-icons close" (click)="getShowMenu()">close</span>
     </div>
     <div class="portrait">
       <a [routerLink]="['/main']" fragment="presentation">
         <img src="assets/admin/admin.jpg">
         <h2>M. HATCHI</h2>
-      </a>     
+      </a>
     </div>
 
     <ul>
       <li>
         <a [routerLink]="['/main']" fragment="competences">Compétences</a>
-    </li>
-    <li>
-      <a [routerLink]="['/main']" fragment="formations">Formations</a>
-    </li>
+      </li>
+      <li>
+        <a [routerLink]="['/main']" fragment="formations">Formations</a>
+      </li>
       <li>
         <a [routerLink]="['/main']" fragment="publication">Publication</a>
       </li>
@@ -72,10 +72,10 @@
     </ul>
     <div class="reseaux">
       <a href='https://www.linkedin.com/in/m-hatchi-bb4b49156/' title="Linkedin" target="_blank">
-          <fa-icon class="linkedinin" [icon]="faLinkedinIn"></fa-icon>
+        <fa-icon class="linkedinin" [icon]="faLinkedinIn"></fa-icon>
       </a>
       <a href='https://github.com/objectifMH/' target="_blank" title="Github">
-          <fa-icon class="github" [icon]="faGithub"></fa-icon>
+        <fa-icon class="github" [icon]="faGithub"></fa-icon>
       </a>
     </div>
   </div>
@@ -89,9 +89,9 @@
 
   <!-- introduction  -->
   <div class="introduction container-fluid background_linear_light" id="presentation">
-    <div class="container_presentation"  (mouseover)="jerentre($event)" (mouseout)="jesors($event)" >
-      <div class="presentation_portrait"  >
-        <div class="presentation" >
+    <div class="container_presentation" (mouseover)="jerentre($event)" (mouseout)="jesors($event)">
+      <div class="presentation_portrait">
+        <div class="presentation">
           <h1 data-aos="fade-down" data-aos-duration="2000">M.&nbsp;HATCHI</h1>
           <h2 data-aos="fade-up" data-aos-duration="2000">Developpeur Web</h2>
           <div class="full">Full </div>
@@ -102,11 +102,12 @@
         </div>
       </div>
     </div>
-    
+
     <div class="infos_personnelles container background_linear ">
       <div class="container_infos_personnelles">
         <h4>
-          En recherche active, je suis disponible et prèt à intégrer une équipe dynamique pour développer des fonctionnalités tant au niveau du back que du front.
+          En recherche active, je suis disponible et prèt à intégrer une équipe dynamique pour développer des
+          fonctionnalités tant au niveau du back que du front.
 
         </h4>
       </div>
@@ -115,26 +116,26 @@
   <!-- Fin introduction  -->
 
   <!-- Compétences  -->
-  <div class="headline_section container-fluid background_linear_invisible" id="competences" >
+  <div class="headline_section container-fluid background_linear_invisible" id="competences">
     <div class=" container container_headline_section">
-      <h2 >
+      <h2>
         <span class="material-icons emoji_bulb">
           emoji_objects
         </span>
-          Compétences
+        Compétences
       </h2>
     </div>
 
-    <div class="container_competences container" >
-      <div class=" background_linear_light">
+    <div class="container_competences container">
+      <div class=" ">
         <span class="material-icons">
           api
         </span>
         <p>
-          Réalisation et conception d'APi REST, CRUD. 
+          Réalisation et conception d'APi REST, CRUD.
         </p>
       </div>
-      <div class="background_linear">
+      <div class="">
         <span class="material-icons">
           web
         </span>
@@ -142,7 +143,7 @@
           Réalisation et conception d'interface Web.
         </p>
       </div>
-      <div class="background_linear_light">
+      <div class="">
         <span class="material-icons">
           storage
         </span>
@@ -153,42 +154,42 @@
     </div>
 
     <div class="container container_headline_section ">
-      <p>Front end</p>  
+      <p>Front end</p>
     </div>
-    <div class=" container container_front" >
-      
+    <div class=" container container_front">
+
       <div data-aos="" data-aos-duration="2000">
-        <img src="assets/angular.png" >
+        <img src="assets/angular.png">
         <p class="titre background_linear_light">
           Angular
         </p>
       </div>
       <div>
-        <img src="assets/react.png" >
+        <img src="assets/react.png">
         <p class="titre background_linear">
           React
         </p>
       </div>
       <div>
-        <img src="assets/js.png" >
+        <img src="assets/js.png">
         <p class="titre background_linear_light">
           JavaScript
         </p>
       </div>
       <div>
-        <img src="assets/Jquery.png" >
+        <img src="assets/Jquery.png">
         <p class="titre background_linear">
           jQuery
         </p>
       </div>
       <div>
-        <img src="assets/html5.png" >
+        <img src="assets/html5.png">
         <p class="titre background_linear_light">
           HTML5
         </p>
       </div>
       <div data-aos="" data-aos-duration="2000">
-        <img src="assets/CSS3.png" class="css" >
+        <img src="assets/CSS3.png" class="css">
         <p class="titre background_linear">
           CSS3
         </p>
@@ -196,23 +197,23 @@
     </div>
 
     <div class="container container_headline_section">
-      <p>Back end</p>  
+      <p>Back end</p>
     </div>
-    <div class="container container_back" >
+    <div class="container container_back">
       <div data-aos="" data-aos-duration="2000">
-        <img src="assets/Java.svg"  class="java">
+        <img src="assets/Java.svg" class="java">
         <p class="titre background_linear_light">
           Java
         </p>
       </div>
       <div>
-        <img src="assets/spring.png" >
+        <img src="assets/spring.png">
         <p class="titre background_linear">
           Spring
         </p>
       </div>
       <div data-aos="" data-aos-duration="2000">
-        <img src="assets/php.png" >
+        <img src="assets/php.png">
         <p class="titre background_linear_light">
           PHP
         </p>
@@ -220,9 +221,9 @@
     </div>
 
     <div class="container container_headline_section">
-      <p>Administration de bases de données</p>  
+      <p>Administration de bases de données</p>
     </div>
-    <div class="container container_bdd" >
+    <div class="container container_bdd">
       <div data-aos="" data-aos-duration="2000">
         <img src="assets/MySQL.png">
         <p class="titre background_linear">
@@ -230,19 +231,19 @@
         </p>
       </div>
       <div>
-        <img src="assets/PhpMyA.png" >
+        <img src="assets/PhpMyA.png">
         <p class="titre php_post background_linear_light">
           PHPMyAdmin
         </p>
       </div>
       <div data-aos="" data-aos-duration="2000">
-        <img src="assets/pgsql.svg.png" >
+        <img src="assets/pgsql.svg.png">
         <p class="titre php_post background_linear">
           PostGreSQL
         </p>
       </div>
       <div data-aos="" data-aos-duration="2000">
-        <img src="assets/Hibernate.png" >
+        <img src="assets/Hibernate.png">
         <p class="titre background_linear_light">
           Hibernate
         </p>
@@ -251,190 +252,295 @@
   </div>
   <!-- Fin Compétences  -->
 
-<!-- Formations  -->
-<div class="container-fluid headline_section " id="formations" >
-  <div class="container container_headline_section">
-    <h2>
-      <span class="material-icons emoji_bulb">
-        school
-      </span>
+  <!-- Formations  -->
+  <div class="container-fluid headline_section " id="formations">
+    <div class="container container_headline_section">
+      <h2>
+        <span class="material-icons emoji_bulb">
+          school
+        </span>
         Formations
-    </h2>
-  </div>
-
-  <div class=" container container_formations" >
-    <div data-aos="zoom-in-up" data-aos-duration="2000">
-      <img src="assets/epsi.png">
-      <p class="titre">
-        POE Java Full &nbsp;Stack, Java, JEE, Angular.
-      </p>
-      <span class="background_linear">
-        Epsi Montpellier - 2019
-      </span>
+      </h2>
     </div>
 
-    <div data-aos="zoom-in-up" data-aos-duration="2000">
-      <img src="assets/o3w.png">
-      <p class="titre">
-        Titre professionnel “Développeur&nbsp;logiciel” de niveau&nbsp;III, Objectif&nbsp;3W.
-      </p>
-      <span class="background_linear">Objectif3W - 2017</span>
-    </div>
-
-    <div data-aos="zoom-in-up" data-aos-duration="2000">
-      <img src="assets/um2.png">
-      <p class="titre">
-        Master &nbsp;II mention Informatique spécialité Intégration des Compétences.
-      </p>
-      <span class="background_linear">Université Montpellier II - 2010</span>
-    </div>
-  </div>
-</div>
-<!-- Fin Formations  -->
-
-<!-- Publication  -->
-<div class="container-fluid background_linear_light">
-  <div class="container headline_section" id="publication">
-    <div class="container_headline_section">
-      <h2>
-        <span class="material-icons emoji_bulb">
-          menu_book
+    <div class=" container container_formations">
+      <div data-aos="zoom-in-up" data-aos-duration="2000">
+        <img src="assets/epsi.png">
+        <p class="titre">
+          POE Java Full &nbsp;Stack, Java, JEE, Angular.
+        </p>
+        <span class="background_linear">
+          Epsi Montpellier - 2019
         </span>
+      </div>
+
+      <div data-aos="zoom-in-up" data-aos-duration="2000">
+        <img src="assets/o3w.png">
+        <p class="titre">
+          Titre professionnel “Développeur&nbsp;logiciel” de niveau&nbsp;III, Objectif&nbsp;3W.
+        </p>
+        <span class="background_linear">Objectif3W - 2017</span>
+      </div>
+
+      <div data-aos="zoom-in-up" data-aos-duration="2000">
+        <img src="assets/um2.png">
+        <p class="titre">
+          Master &nbsp;II mention Informatique spécialité Intégration des Compétences.
+        </p>
+        <span class="background_linear">Université Montpellier II - 2010</span>
+      </div>
+    </div>
+  </div>
+  <!-- Fin Formations  -->
+
+  <!-- Publication  -->
+  <div class="container-fluid background_linear_light">
+    <div class="container headline_section" id="publication">
+      <div class="container_headline_section">
+        <h2>
+          <span class="material-icons emoji_bulb">
+            menu_book
+          </span>
           Publication
-      </h2>
-      <div class="container_publication">       
-        <p>Regroupement des Définitions de Sigles Biomédicaux
-        </p>   
-        <span class="titre">RNTI - Revue des Nouvelles Technologies de l'Information (ISSN : 1764-1667)</span>      
-        <span class="auteurs">Ousmane Djanga , Hanine Hamzioui , Michaël Hatchi , Isabelle Mougenot , Mathieu Roche </span>
-        <div class="savoir_plus_publication_container">
-          <div class="btn  savoir_plus_publication">
-            <a href="https://hal.archives-ouvertes.fr/lirmm-00816301" target="_blank" >
-              En savoir plus
-              <span class="material-icons arrow_right_alt">
-                arrow_right_alt
-              </span>
-            </a>
+        </h2>
+        <div class="container_publication">
+          <p>Regroupement des Définitions de Sigles Biomédicaux
+          </p>
+          <span class="titre">RNTI - Revue des Nouvelles Technologies de l'Information (ISSN : 1764-1667)</span>
+          <span class="auteurs">Ousmane Djanga , Hanine Hamzioui , Michaël Hatchi , Isabelle Mougenot , Mathieu Roche
+          </span>
+          <div class="savoir_plus_publication_container">
+            <div class="btn  savoir_plus_publication">
+              <a href="https://hal.archives-ouvertes.fr/lirmm-00816301" target="_blank">
+                En savoir plus
+                <span class="material-icons arrow_right_alt">
+                  arrow_right_alt
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>  
+    </div>
   </div>
-</div>
-<!-- Fin Publication  -->
+  <!-- Fin Publication  -->
 
 
- <!-- Réalisation  -->
+  <!-- Réalisation  -->
   <div class="container">
-    <div class="container headline_section"  id="realisations">
+    <div class="container headline_section" id="realisations">
       <div class=" container_headline_section">
-      <h2>
-        <span class="material-icons emoji_bulb">
-          construction
-        </span>
+        <h2>
+          <span class="material-icons emoji_bulb">
+            construction
+          </span>
           Réalisations
-      </h2>
-      <p>Angular, React, Spring Boot</p>  
-    </div>
-    <div class="container_realisations"> 
+        </h2>
+        <p>Angular, React, Spring Boot</p>
+      </div>
+      <div class="container_realisations">
+        <div class="container car">
+          <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide class="first">
+              <div class="realisation">
+                <h4>
+                  NOVAE
+                </h4>
+                <div class="img_container">
+                  <img src="assets/projets/novae.png">
+                </div>
+                <p>
+                  <span class="badge badge-danger">En construction</span>
+                  <span class="badge badge-success">Spring Boot</span>
+                  <span class="badge badge-success">Angular</span>
+                  <!-- <span class="badge badge-success">Responsive</span> -->
+                </p>
+                <div class="savoir_plus_realisation_container">
+                  <div class="btn  savoir_plus_realisation">
+                    <a href="https://objectifmh.github.io/Novae" target="_blank">
+                      En savoir plus
+                      <span class="material-icons arrow_right_alt">
+                        arrow_right_alt
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="realisation">
+                <h4>
+                  8MirroorMedia
+                </h4>
+                <div class="img_container">
+                  <img src="assets/projets/8mirror.png">
+                </div>
+                <p>
+                  <span class="badge badge-success">Spring Boot</span>
+                  <span class="badge badge-success">Angular</span>
+                  <span class="badge badge-success">Responsive</span>
+                </p>
+                <div class="savoir_plus_realisation_container">
+                  <div class="btn  savoir_plus_realisation">
+                    <a href="https://objectifmh.github.io/MirroorMedia/#/home" target="_blank">
+                      En savoir plus
+                      <span class="material-icons arrow_right_alt">
+                        arrow_right_alt
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="realisation">
+                <h4>
+                  PokeMirroor
+                </h4>
+                <div class="img_container">
+                  <img src="assets/projets/poke.png">
+                </div>
+                <p>
+                  <span class="badge badge-success">Angular</span>
+                  <span class="badge badge-success">Bootstrap</span>
+                  <span class="badge badge-success">Responsive</span>
+                </p>
+                <div class="savoir_plus_realisation_container">
+                  <div class="btn  savoir_plus_realisation">
+                    <a href="https://objectifmh.github.io/pokemirroor/#/main" target="_blank">
+                      En savoir plus
+                      <span class="material-icons arrow_right_alt">
+                        arrow_right_alt
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="realisation">
+                <h4>
+                  React&nbsp;MovieDB
+                </h4>
+                <div class="img_container">
+                  <img src="assets/projets/react_movie.png">
+                </div>
+                <p>
+                  <span class="badge badge-success">React</span>
+                  <span class="badge badge-success">Redux</span>
+                  <span class="badge badge-success">Bootstrap</span>
+                  <span class="badge badge-success">Responsive</span>
+                </p>
+                <div class="savoir_plus_realisation_container">
+                  <div class="btn  savoir_plus_realisation">
+                    <a href="https://objectifmh.github.io/reactReduxMovieDB/" target="_blank">
+                      En savoir plus
+                      <span class="material-icons arrow_right_alt">
+                        arrow_right_alt
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
+        <!-- <div class="realisation">
+          <h4>
+            NOVAE
+          </h4>
+          <div class="img_container">
+            <img src="assets/projets/novae.png">
+          </div>
+          <p>
+            <span class="badge badge-danger">En construction</span>
+            <span class="badge badge-success">Spring Boot</span>
+            <span class="badge badge-success">Angular</span>
+            <span class="badge badge-success">Responsive</span>
+          </p>
+          <div class="savoir_plus_realisation_container">
+            <div class="btn  savoir_plus_realisation">
+              <a href="https://objectifmh.github.io/Novae" target="_blank">
+                En savoir plus
+                <span class="material-icons arrow_right_alt">
+                  arrow_right_alt
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="realisation">
+          <h4>
+            8MirroorMedia
+          </h4>
+          <div class="img_container">
+            <img src="assets/projets/8mirror.png">
+          </div>
+          <p>
+            <span class="badge badge-success">Spring Boot</span>
+            <span class="badge badge-success">Angular</span>
+            <span class="badge badge-success">Responsive</span>
+          </p>
+          <div class="savoir_plus_realisation_container">
+            <div class="btn  savoir_plus_realisation">
+              <a href="https://objectifmh.github.io/MirroorMedia/#/home" target="_blank">
+                En savoir plus
+                <span class="material-icons arrow_right_alt">
+                  arrow_right_alt
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="realisation">
+          <h4>
+            PokeMirroor
+          </h4>
+          <div class="img_container">
+            <img src="assets/projets/poke.png">
+          </div>
+          <p>
+            <span class="badge badge-success">Angular</span>
+            <span class="badge badge-success">Bootstrap</span>
+            <span class="badge badge-success">Responsive</span>
+          </p>
+          <div class="savoir_plus_realisation_container">
+            <div class="btn  savoir_plus_realisation">
+              <a href="https://objectifmh.github.io/pokemirroor/#/main" target="_blank">
+                En savoir plus
+                <span class="material-icons arrow_right_alt">
+                  arrow_right_alt
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="realisation">
+          <h4>
+            React&nbsp;MovieDB
+          </h4>
+          <div class="img_container">
+            <img src="assets/projets/react_movie.png">
+          </div>
+          <p>
+            <span class="badge badge-success">React</span>
+            <span class="badge badge-success">Redux</span>
+            <span class="badge badge-success">Bootstrap</span>
+            <span class="badge badge-success">Responsive</span>
+          </p>
+          <div class="savoir_plus_realisation_container">
+            <div class="btn  savoir_plus_realisation">
+              <a href="https://objectifmh.github.io/reactReduxMovieDB/" target="_blank">
+                En savoir plus
+                <span class="material-icons arrow_right_alt">
+                  arrow_right_alt
+                </span>
+              </a>
+            </div>
+          </div>
+        </div> -->
 
-      <div class="realisation">
-        <h4>
-          NOVAE
-        </h4>
-        <div class="img_container">
-          <img src="assets/projets/novae.png" >
-        </div>
-        <p>
-          <span class="badge badge-danger">En construction</span>
-          <span class="badge badge-success">Spring Boot</span>
-          <span class="badge badge-success">Angular</span>
-          <span class="badge badge-success">Responsive</span> 
-        </p>
-        <div class="savoir_plus_realisation_container">
-          <div class="btn  savoir_plus_realisation">
-            <a href="https://objectifmh.github.io/Novae" target="_blank" >
-              En savoir plus
-              <span class="material-icons arrow_right_alt">
-                arrow_right_alt
-              </span>
-            </a>
-          </div>
-        </div>
       </div>
-      <div class="realisation">
-        <h4>
-          8MirroorMedia
-        </h4>
-        <div class="img_container">
-          <img src="assets/projets/8mirror.png" >
-        </div>
-        <p>
-          <span class="badge badge-success">Spring Boot</span>
-          <span class="badge badge-success">Angular</span>
-          <span class="badge badge-success">Responsive</span> 
-        </p>
-        <div class="savoir_plus_realisation_container">
-          <div class="btn  savoir_plus_realisation">
-            <a href="https://objectifmh.github.io/MirroorMedia/#/home" target="_blank" >
-              En savoir plus
-              <span class="material-icons arrow_right_alt">
-                arrow_right_alt
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="realisation">
-        <h4>
-          PokeMirroor
-        </h4>
-        <div class="img_container">  
-          <img src="assets/projets/poke.png" >
-        </div>
-        <p>
-          <span class="badge badge-success">Angular</span>
-          <span class="badge badge-success">Bootstrap</span>
-          <span class="badge badge-success">Responsive</span> 
-        </p>
-        <div class="savoir_plus_realisation_container">
-          <div class="btn  savoir_plus_realisation">
-            <a href="https://objectifmh.github.io/pokemirroor/#/main" target="_blank" >
-              En savoir plus
-              <span class="material-icons arrow_right_alt">
-                arrow_right_alt
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="realisation">
-        <h4>
-          React&nbsp;MovieDB
-        </h4>
-        <div class="img_container">  
-          <img src="assets/projets/react_movie.png" >
-        </div>
-        <p>
-          <span class="badge badge-success">React</span>
-          <span class="badge badge-success">Redux</span>
-          <span class="badge badge-success">Bootstrap</span>
-          <span class="badge badge-success">Responsive</span> 
-        </p>
-        <div class="savoir_plus_realisation_container">
-          <div class="btn  savoir_plus_realisation">
-            <a href="https://objectifmh.github.io/reactReduxMovieDB/" target="_blank" >
-              En savoir plus
-              <span class="material-icons arrow_right_alt">
-                arrow_right_alt
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
     </div>
   </div>
   <!-- Fin Réalisation  -->
@@ -447,23 +553,23 @@
           <span class="material-icons emoji_bulb">
             person
           </span>
-            Me contacter
+          Me contacter
         </h2>
       </div>
-        <div class="container_contact">       
-          <div class="infos_personnelles container background_linear ">
-            <div class="container_infos_personnelles">
-            <div >
+      <div class="container_contact">
+        <div class="infos_personnelles container background_linear ">
+          <div class="container_infos_personnelles">
+            <div>
               <span class="material-icons">
                 location_on
               </span>
               <p>
                 Avenue&nbsp;Charles&nbsp;Flahaut
-                <br/>
+                <br />
                 34090, Montpellier
               </p>
             </div>
-            <div >
+            <div>
               <span class="material-icons">
                 phone
               </span>
@@ -480,7 +586,7 @@
               <p>
                 mhatchi@yahoo.fr
               </p>
-            </div> 
+            </div>
             <div data-aos="zoom-out-up" data-aos-duration="1400" class="contact">
               <a href='https://www.linkedin.com/in/m-hatchi-bb4b49156/' title="Linkedin" target="_blank">
                 <fa-icon class="linkedinin" [icon]="faLinkedinIn"></fa-icon>
@@ -499,7 +605,7 @@
             </div>
           </div>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
   <!-- Fin Contact -->
@@ -511,21 +617,21 @@
 <footer>
 
   <div class="nav_footer">
-    
+
     <div class="portrait">
       <a [routerLink]="['/main']" fragment="presentation">
         <img src="assets/admin/admin.jpg">
         <h2>M.&nbsp;HATCHI</h2>
-      </a>     
+      </a>
     </div>
 
     <ul>
       <li>
         <a [routerLink]="['/main']" fragment="competences">Compétences</a>
-    </li>
-    <li>
-      <a [routerLink]="['/main']" fragment="formations">Formations</a>
-    </li>
+      </li>
+      <li>
+        <a [routerLink]="['/main']" fragment="formations">Formations</a>
+      </li>
       <li>
         <a [routerLink]="['/main']" fragment="publication">Publication</a>
       </li>
