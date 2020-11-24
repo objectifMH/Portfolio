@@ -110,6 +110,8 @@
           fonctionnalités tant au niveau du back que du front.
 
         </h4>
+        <div type="submit" class="btn button"><a [routerLink]="['/main']" fragment="contact">Me contacter</a></div>
+
       </div>
     </div>
   </div>
@@ -310,7 +312,8 @@
           <span class="auteurs">Ousmane Djanga , Hanine Hamzioui , Michaël Hatchi , Isabelle Mougenot , Mathieu Roche
           </span>
           <div class="savoir_plus_publication_container">
-            <div class="btn  savoir_plus_publication">
+            
+            <div type="submit" class="btn button" >
               <a href="https://hal.archives-ouvertes.fr/lirmm-00816301" target="_blank">
                 En savoir plus
                 <span class="material-icons arrow_right_alt">
@@ -356,7 +359,7 @@
                   <!-- <span class="badge badge-success">Responsive</span> -->
                 </p>
                 <div class="savoir_plus_realisation_container">
-                  <div class="btn  savoir_plus_realisation">
+                  <div type="submit" class="btn button">
                     <a href="https://objectifmh.github.io/Novae" target="_blank">
                       En savoir plus
                       <span class="material-icons arrow_right_alt">
@@ -381,7 +384,7 @@
                   <span class="badge badge-success">Responsive</span>
                 </p>
                 <div class="savoir_plus_realisation_container">
-                  <div class="btn  savoir_plus_realisation">
+                  <div type="submit" class="btn button">
                     <a href="https://objectifmh.github.io/MirroorMedia/#/home" target="_blank">
                       En savoir plus
                       <span class="material-icons arrow_right_alt">
@@ -389,6 +392,7 @@
                       </span>
                     </a>
                   </div>
+
                 </div>
               </div>
             </ng-template>
@@ -406,7 +410,7 @@
                   <span class="badge badge-success">Responsive</span>
                 </p>
                 <div class="savoir_plus_realisation_container">
-                  <div class="btn  savoir_plus_realisation">
+                  <div type="submit" class="btn button">
                     <a href="https://objectifmh.github.io/pokemirroor/#/main" target="_blank">
                       En savoir plus
                       <span class="material-icons arrow_right_alt">
@@ -432,7 +436,7 @@
                   <span class="badge badge-success">Responsive</span>
                 </p>
                 <div class="savoir_plus_realisation_container">
-                  <div class="btn  savoir_plus_realisation">
+                  <div type="submit" class="btn button">
                     <a href="https://objectifmh.github.io/reactReduxMovieDB/" target="_blank">
                       En savoir plus
                       <span class="material-icons arrow_right_alt">
@@ -557,52 +561,101 @@
         </h2>
       </div>
       <div class="container_contact">
-        <div class="infos_personnelles container background_linear ">
-          <div class="container_infos_personnelles">
-            <div>
-              <span class="material-icons">
-                location_on
-              </span>
-              <p>
-                Avenue&nbsp;Charles&nbsp;Flahaut
-                <br />
-                34090, Montpellier
-              </p>
+        <div class="infos_personnelles container  ">
+
+
+          <div class="form">
+            <!-- contact  -->
+            <div class="contact-info ">
+              <span class="carre un"></span>
+              <span class="carre deux"></span>
+
+              <h3 class="titre">Me contacter </h3>
+              <div class="info_container">
+                <div>
+                  <span class="material-icons">
+                    location_on
+                  </span>
+                  <p>
+                    Avenue&nbsp;Charles&nbsp;Flahaut
+                    <br />
+                    34090, Montpellier
+                  </p>
+                </div>
+                <div>
+                  <span class="material-icons">
+                    phone
+                  </span>
+                  <p>
+                    +33 (0)6 87 43 57 61
+                  </p>
+                </div>
+                <div class="contact">
+                  <a href="mailto:mhatchi@yahoo.fr">
+                    <span class="material-icons">
+                      mail
+                    </span>
+                  </a>
+                  <p>
+                    mhatchi@yahoo.fr
+                  </p>
+                </div>
+
+              </div>
+              <!-- reseaux  -->
+
+              <div class="reseaux_contact">
+                <a href='https://www.linkedin.com/in/m-hatchi-bb4b49156/' title="Linkedin" target="_blank">
+                  <fa-icon class="linkedinin" [icon]="faLinkedinIn"></fa-icon>
+                </a>
+                <a href='https://github.com/objectifMH/' target="_blank" title="Github">
+                  <fa-icon class="github" [icon]="faGithub"></fa-icon>
+                </a>
+              </div>
+
+              <!-- fin reseaux  -->
+
             </div>
-            <div>
-              <span class="material-icons">
-                phone
-              </span>
-              <p>
-                +33 (0)6 87 43 57 61
-              </p>
+            <!-- formulaire contact  -->
+            <div class="contact-form">
+              <span class="circle un"></span>
+              <span class="circle deux"></span>
+              <span class="circle trois"></span>
+
+
+              <form [formGroup]="contactForm">
+                <h3 class="titre">Envoyez un message</h3>
+                <div class="form-group  ">
+
+                  <input type="text" class="form-control" formControlName="nom" id="nom" (blur)="onBlurMethod($event)"
+                    (focus)="onFocusMethod($event)">
+                  <label for="">Nom</label>
+                  <span>
+                    Nom
+                  </span>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="mail" id="mail" (blur)="onBlurMethod($event)"
+                    (focus)="onFocusMethod($event)">
+                  <label for="">Mail</label>
+                  <span>
+                    Mail
+                  </span>
+                </div>
+                <div class="form-group">
+                  <textarea formControlName="message" id="message" (blur)="onBlurMethod($event)"
+                    (focus)="onFocusMethod($event)"></textarea>
+                  <label class="label_textarea" for="">Message</label>
+                  <span>
+                    Message
+                  </span>
+                </div>
+
+                <button type="submit" class="btn" (click)="onSubmit()">Envoyer</button>
+
+              </form>
             </div>
-            <div data-aos="zoom-out-up" data-aos-duration="1000" class="contact">
-              <a href="mailto:mhatchi@yahoo.fr">
-                <span class="material-icons">
-                  mail
-                </span>
-              </a>
-              <p>
-                mhatchi@yahoo.fr
-              </p>
-            </div>
-            <div data-aos="zoom-out-up" data-aos-duration="1400" class="contact">
-              <a href='https://www.linkedin.com/in/m-hatchi-bb4b49156/' title="Linkedin" target="_blank">
-                <fa-icon class="linkedinin" [icon]="faLinkedinIn"></fa-icon>
-              </a>
-              <p>
-                M. Hatchi
-              </p>
-            </div>
-            <div data-aos="zoom-out-up" data-aos-duration="1800" class="contact">
-              <a href='https://github.com/objectifMH/' target="_blank" title="Github">
-                <fa-icon class="github" [icon]="faGithub"></fa-icon>
-              </a>
-              <p>
-                github.com/objectifMH
-              </p>
-            </div>
+
           </div>
         </div>
       </div>

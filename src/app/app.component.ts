@@ -1,4 +1,5 @@
 import { Component, Directive, HostBinding, HostListener } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import * as AOS from 'aos';
 import { OwlOptions } from 'ngx-owl-carousel-o';
@@ -22,12 +23,14 @@ export class AppComponent {
 
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    navSpeed: 700,
-    navText: ['', ''],
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    autoplay: true,
+    dots: true,
+    navSpeed: 200,
+    // navText: ["<span class='material-icons'>arrow_left</span>",
+    //  "<span class='material-icons'>arrow_right</span>"],
     responsive: {
       0: {
         items: 1
@@ -39,13 +42,37 @@ export class AppComponent {
         items: 3
       }
     },
-    nav: true
+    nav: false
+  }
+
+  contactForm: FormGroup;
+  constructor(private fb: FormBuilder) {
+    this.contactForm = this.fb.group({
+      nom: [''],
+      mail: [''],
+      message: ['']
+    });
   }
 
 
   ngOnInit() {
     this.isShowMenu = false;
     AOS.init();
+  }
+
+  onFocusMethod(e) {
+    //console.log(e.srcElement.parentNode);
+    e.srcElement.parentNode.classList.add("focus");
+  }
+
+  onBlurMethod(e) {
+    let attr = e.target.id; 
+    if ( this.contactForm.value[attr] === "")
+    e.srcElement.parentNode.classList.remove("focus");
+  }
+
+  onSubmit() {
+    console.log(this.contactForm.value.nom, this.contactForm.value.mail, this.contactForm.value.message)
   }
 
   getShowMenu() {
