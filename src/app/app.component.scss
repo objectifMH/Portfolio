@@ -209,33 +209,35 @@ main {
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
+        letter-spacing: 1px;
 
         .button {
             background-color: white;
             border: 2px solid #fafafa;
-            font-size: 1.1rem;
+            padding: .45rem .85rem !important;
             color: #206894;
             line-height: 1;
-            border-radius: 10px;
             outline: none;
             cursor: pointer;
             transition: .3s;
-            width: 180px;
-            margin: auto;
-            margin-top: 40px;
+            font-size: 1.1em;
+            margin: 20px auto 0;
+            
             a {
                 text-decoration: none;
                 transition: .3s ease-in-out;
+                display: flex;
+                align-items: center;
             }
     
             &:hover {
                 background-color: transparent;
                 color: $color_text;
-                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.35);
+                box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25);
     
                 a {
                     color: $color_text;
-                    transform: scale(1);
+                    transform: scale(1) !important;
                 }
             }
         }
@@ -364,16 +366,21 @@ main {
         .infos_personnelles {
             order: 3;
             margin-top: 40px;
+            width: 50%;
+            border-radius: 11px;
+            padding: 15px 35px;
 
             .container_infos_personnelles {
                 display: flex;
                 flex-direction: column;
                 font-size: 1.2em;
-                color: $color_text;
+                color: white;
                 padding: 25px 0px 30px;
 
                 h4 {
                     font-size: x-large;
+                    line-height: 1.2em;
+                    letter-spacing: 0.5px;
                 }
         
                 div {
@@ -627,6 +634,10 @@ main {
             justify-content: center;
             flex-direction: column;
 
+            span {
+                letter-spacing: 1px;
+            }
+
             p {
                 color: $color_text;
                 font-size: 1.6em;
@@ -655,7 +666,6 @@ main {
                     font-size: 1.1rem;
                     color: #206894;
                     line-height: 1;
-                    //border-radius: 10px;
                     outline: none;
                     cursor: pointer;
                     transition: .3s;
@@ -755,7 +765,6 @@ main {
                         font-size: 1.1rem;
                         color: #206894;
                         line-height: 1;
-                        //border-radius: 10px;
                         outline: none;
                         cursor: pointer;
                         transition: .3s;
@@ -784,6 +793,9 @@ main {
         .container_contact {
             .infos_personnelles {
                 margin-top: 40px;
+                p {
+                    letter-spacing: 1px;
+                }
         
                 .container_infos_personnelles {
                     display: flex;
@@ -796,7 +808,6 @@ main {
                 }
 
                     font-family: "Poppins", sans-serif;
-
                     position: relative;
                     width: 100%;
                     height: 100%;
@@ -872,7 +883,8 @@ main {
                     
                                 p {
                                     width: 190px;
-                                    font-size: 0.95rem;
+                                    font-size: 1rem;
+                                    letter-spacing: 0.9;
                                     margin: 0 0 0 30px;
                                 }
                 
@@ -1280,6 +1292,17 @@ footer {
 }
 
 @media screen and (max-width: 761px) {
+
+    main .introduction .infos_personnelles {
+        width: 100% !important;
+        h4 {
+            font-size: 1.2em !important;
+        }
+    }
+
+    main .headline_section .container_publication span {
+        letter-spacing: 0px;
+    }
     .container_contact {
         .infos_personnelles {
             .form {
