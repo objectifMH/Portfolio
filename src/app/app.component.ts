@@ -95,10 +95,17 @@ export class AppComponent {
           this.errorNom = this.contactForm.controls.nom.status === "VALID" ? false : true;
 
           this.toastr.success(this.contactForm.value.nom + ", Votre message a bien été envoyé ", "Message", {
-            timeOut: 1000,
+            timeOut: 1800,
             progressBar: true,
             progressAnimation: 'increasing'
           })
+
+          this.contactForm = this.fb.group({
+            nom: [''],
+            mail: [''],
+            message: ['']
+          });
+
         },
         error => {
           console.log(error);

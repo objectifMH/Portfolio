@@ -658,11 +658,14 @@ main {
 
             span {
                 letter-spacing: 1px;
+                z-index: 10;
             }
 
             p {
                 color: $color_text;
                 font-size: 1.6em;
+                z-index: 10;
+
             }       
         
             .titre {
@@ -670,17 +673,23 @@ main {
                 font-size: 1.4em;
                 font-weight: bolder;
                 line-height: 1.4em;
+                z-index: 10;
+
             }
 
             .auteurs {
                 color: $color_dark;
                 font-size: 1.2em;
+                z-index: 10;
+
             }
         
             .savoir_plus_publication_container {
                 display: flex;
                 justify-content: flex-end;
                 margin: 10px;
+                z-index: 10;
+
 
                 .button {
                     background-color: white;
@@ -692,6 +701,8 @@ main {
                     cursor: pointer;
                     transition: .3s;
                     margin-top: 10px;
+                    z-index: 10;
+
                     a {
                         text-decoration: none;
                         transition: .3s ease-in-out;
@@ -713,6 +724,8 @@ main {
 
                 
             }
+
+            
         }
 
         .container_realisations {
@@ -1167,6 +1180,58 @@ main {
         }
     }
  
+}
+
+#publication {
+    position: relative;
+    overflow: hidden;
+    .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: linear-gradient(121deg, transparent 20% , $color_light);
+        position: absolute;
+
+        &.un {
+            width: 130px;
+            height: 130px;
+            top: 130px;
+            right: -40px;
+            animation-delay: 2s;
+            animation: slideDownContact2 25s infinite;
+            
+        }
+
+        &.deux {
+            width: 80px;
+            height: 80px;
+            top: 10px;
+            right: 217px;
+            animation-delay: 8s;
+            animation: slideDownContact1 15s infinite;
+    
+        }
+
+        &.trois {
+            width: 90px;
+            height: 90px;
+            top: 82px;
+            right: 174px;
+            animation-delay: 12s;
+            animation: slideDownContact2 25s infinite;
+            
+        }
+
+        &.quatre {
+            width: 290px;
+            height: 290px;
+            top: 82px;
+            left: 14px;
+            animation-delay: 18s;
+            animation: slideDownContact1 20s infinite;
+            
+        }
+     }
 }
 
 
