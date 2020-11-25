@@ -104,6 +104,12 @@
     </div>
 
     <div class="infos_personnelles container background_linear ">
+      
+      <span class="circle un" data-aos="zoom-in-up" data-aos-duration="2000"></span>
+      <span class="circle deux" data-aos="zoom-in-up" data-aos-duration="3000"></span>
+      <span class="circle trois" data-aos="zoom-in-up" data-aos-duration="3000"></span>
+
+      
       <div class="container_infos_personnelles">
         <h4>
           En recherche active, je suis disponible et prèt à intégrer une équipe dynamique pour développer des
@@ -574,7 +580,7 @@
 
               <h3 class="titre">Me contacter </h3>
               <div class="info_container">
-                <div>
+                <div data-aos="zoom-in-up" data-aos-duration="3000">
                   <span class="material-icons">
                     location_on
                   </span>
@@ -584,7 +590,7 @@
                     34090, Montpellier
                   </p>
                 </div>
-                <div>
+                <div data-aos="zoom-in-up" data-aos-duration="3000">
                   <span class="material-icons">
                     phone
                   </span>
@@ -592,7 +598,7 @@
                     +33 (0)6 87 43 57 61
                   </p>
                 </div>
-                <div class="contact">
+                <div class="contact" data-aos="zoom-in-up" data-aos-duration="3000">
                   <a href="mailto:mhatchi@yahoo.fr">
                     <span class="material-icons">
                       mail
@@ -629,24 +635,30 @@
                 <h3 class="titre">Envoyez un message</h3>
                 <div class="form-group  ">
 
-                  <input type="text" class="form-control" formControlName="nom" id="nom" (blur)="onBlurMethod($event)"
-                    (focus)="onFocusMethod($event)">
+                  <input type="text" class="form-control" required formControlName="nom" id="nom" (blur)="onBlurMethod($event)"
+                    (focus)="onFocusMethod($event)"
+                    [ngClass]="{'errorForm': errorNom }"
+                    >
                   <label for="">Nom</label>
                   <span>
                     Nom
                   </span>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" formControlName="mail" id="mail" (blur)="onBlurMethod($event)"
-                    (focus)="onFocusMethod($event)">
+                  <input type="email" class="form-control" required formControlName="mail" email="true" id="mail" (blur)="onBlurMethod($event)"
+                    (focus)="onFocusMethod($event)"
+                    [ngClass]="{'errorForm': errorMail }"
+                    >
                   <label for="">Mail</label>
                   <span>
                     Mail
                   </span>
                 </div>
                 <div class="form-group">
-                  <textarea formControlName="message" id="message" (blur)="onBlurMethod($event)"
-                    (focus)="onFocusMethod($event)"></textarea>
+                  <textarea formControlName="message" required id="message" (blur)="onBlurMethod($event)"
+                    (focus)="onFocusMethod($event)"
+                    [ngClass]="{'errorForm': errorMessage }"
+                    ></textarea>
                   <label class="label_textarea" for="">Message</label>
                   <span>
                     Message

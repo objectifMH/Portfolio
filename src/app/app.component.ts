@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import * as AOS from 'aos';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { HttpClient } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr/toastr/toastr.service';
 
 
 
@@ -17,6 +19,10 @@ export class AppComponent {
 
   faLinkedinIn = faLinkedinIn;
   faGithub = faGithub;
+
+  errorMail = false;
+  errorNom = false;
+  errorMessage = false;
 
   x;
   y;
@@ -46,7 +52,7 @@ export class AppComponent {
   }
 
   contactForm: FormGroup;
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private httpClient: HttpClient,  private toastr: ToastrService) {
     this.contactForm = this.fb.group({
       nom: [''],
       mail: [''],
@@ -61,19 +67,51 @@ export class AppComponent {
   }
 
   onFocusMethod(e) {
-    //console.log(e.srcElement.parentNode);
     e.srcElement.parentNode.classList.add("focus");
   }
 
   onBlurMethod(e) {
-    let attr = e.target.id; 
-    if ( this.contactForm.value[attr] === "")
-    e.srcElement.parentNode.classList.remove("focus");
+    let attr = e.target.id;
+    if (this.contactForm.value[attr] === "")
+      e.srcElement.parentNode.classList.remove("focus");
   }
 
   onSubmit() {
-    console.log(this.contactForm.value.nom, this.contactForm.value.mail, this.contactForm.value.message)
+    if (this.contactForm.valid) {
+
+      let message =  this.contactForm.value.message + "\n Envoyé du Porfolio. ";
+      
+
+      let formData = new FormData();
+      formData.append("name", this.contactForm.value.nom);
+      formData.append("email", this.contactForm.value.mail);
+      formData.append("message", message);
+
+
+      this.httpClient.post("https://formspree.io/f/mknpvgjd", formData).subscribe(
+        response => {
+          this.errorMail = this.contactForm.controls.mail.status === "VALID" ? false : true;
+          this.errorMessage = this.contactForm.controls.message.status === "VALID" ? false : true;
+          this.errorNom = this.contactForm.controls.nom.status === "VALID" ? false : true;
+
+          this.toastr.success(this.contactForm.value.nom + ", Votre message a bien été envoyé ", "Message", {
+            timeOut: 1000,
+            progressBar: true,
+            progressAnimation: 'increasing'
+          })
+        },
+        error => {
+          console.log(error);
+        }
+      );
+    }
+    else {
+      this.errorMail = this.contactForm.controls.mail.status === "VALID" ? false : true;
+      this.errorMessage = this.contactForm.controls.message.status === "VALID" ? false : true;
+      this.errorNom = this.contactForm.controls.nom.status === "VALID" ? false : true;
+    }
   }
+
 
   getShowMenu() {
     this.isShowMenu = !this.isShowMenu;
@@ -81,7 +119,6 @@ export class AppComponent {
   }
 
   @HostListener('window:scroll', ['$event'])
-
   onWindowScroll(e) {
     let element = document.querySelector('header');
     if (window.pageYOffset > element.clientHeight) {
@@ -94,7 +131,6 @@ export class AppComponent {
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-
     // this.x = (document.body.clientWidth);
     // this.y = (document.body.clientHeight);
   }

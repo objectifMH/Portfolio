@@ -210,6 +210,7 @@ main {
         background-size: cover;
         background-attachment: fixed;
         letter-spacing: 1px;
+        position: relative;
 
         .button {
             background-color: white;
@@ -222,6 +223,7 @@ main {
             transition: .3s;
             font-size: 1.1em;
             margin: 20px auto 0;
+            z-index: 10;
             
             a {
                 text-decoration: none;
@@ -370,6 +372,51 @@ main {
             width: 50%;
             border-radius: 11px;
             padding: 15px 35px;
+            position: relative;
+            overflow: hidden;
+
+            // animations 
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(10deg, transparent 5% , $color_dark);
+            position: absolute;
+            animation: 20s slideDown infinite;
+            
+
+            &.un {
+                width: 60px;
+                height: 50px;
+                top: 48px;
+                transform: rotate(162deg);
+                animation-delay: 5s;
+                border-radius: 50%;
+            }
+
+            &.deux {
+                width: 40px;
+                height: 40px;
+                top: 252px;
+                right: 39px;
+                transform: rotate(21deg);
+                animation-delay: 10s;
+                border-radius: 50%;
+            }
+
+
+            &.trois {
+                width: 90px;
+                height: 90px;
+                right: 179px;
+                transform: rotate(321deg);
+                animation-delay: 15s;
+                border-radius: 50%;
+            }
+
+        }
+
+        // fin animations 
 
             .container_infos_personnelles {
                 display: flex;
@@ -382,6 +429,7 @@ main {
                     font-size: x-large;
                     line-height: 1.2em;
                     letter-spacing: 0.5px;
+                    z-index: 10;
                 }
         
                 div {
@@ -391,33 +439,6 @@ main {
                     align-items: center;
                     padding: 15px 5px;
                     
-                   
-                    span {
-                        border-radius: 50%;
-                        color: $color_light;
-                        background: $color_text;
-                        font-size: 1.6em;
-                        padding: 5px;
-                    }
-        
-                    p {
-                        width: 170px;
-                    }
-
-                    a {
-                        .linkedinin, .github {
-                            font-size: 2em;
-                            color: black;
-                            opacity: 0.9;
-                            margin: 8px;  
-                            transition: .3s ease-in-out;    
-                        }
-                        transition: .3s ease-in-out;
-                        &:hover {
-                            opacity: 1;
-                            transform: scale(1.2);
-                        }
-                    }
                 }
             }
         }
@@ -843,12 +864,16 @@ main {
                                 height: 100px;
                                 background: linear-gradient(1deg, transparent 10% , $color_light);
                                 position: absolute;
+                                
         
                                 &.un {
                                     width: 60px;
                                     height: 50px;
                                     top: 298px;
                                     transform: rotate(162deg);
+                                    background-color: red;
+                                    animation-delay: 3s;
+                                    animation: slideDownContact1 25s infinite;
                                 }
         
                                 &.deux {
@@ -857,6 +882,9 @@ main {
                                     top: 252px;
                                     right: 39px;
                                     transform: rotate(21deg);
+                                    background: green;
+                                    animation-delay: 12s;
+                                    animation: slideDownContact2 25s infinite;
                                 }
                             }
                         
@@ -955,6 +983,9 @@ main {
                                 height: 130px;
                                 top: 130px;
                                 right: -40px;
+                                animation-delay: 2s;
+                                animation: slideDownContact2 25s infinite;
+                                
                             }
     
                             &.deux {
@@ -962,6 +993,9 @@ main {
                                 height: 80px;
                                 top: 282px;
                                 right: 217px;
+                                animation-delay: 8s;
+                                animation: slideDownContact1 15s infinite;
+                        
                             }
 
                             &.trois {
@@ -969,6 +1003,9 @@ main {
                                 height: 90px;
                                 top: 82px;
                                 right: 174px;
+                                animation-delay: 12s;
+                                animation: slideDownContact2 25s infinite;
+                                
                             }
 
                             &.quatre {
@@ -976,6 +1013,9 @@ main {
                                 height: 290px;
                                 top: 82px;
                                 right: 174px;
+                                animation-delay: 18s;
+                                animation: slideDownContact1 20s infinite;
+                                
                             }
     
                         }
@@ -1114,6 +1154,15 @@ main {
                             }
                         }
                     }
+            }
+
+            .form-control.ng-dirty.ng-invalid.ng-touched
+            {
+                border: red 2px solid;
+            }
+
+            .errorForm {
+                border: red 3px solid !important;
             }
         }
     }
@@ -1424,5 +1473,46 @@ footer {
     } 
 
     main {
+    }
+}
+
+// Animations 
+
+@keyframes slideDown {
+    from {
+        background: linear-gradient(1deg, transparent 30% , $color_dark);
+        transform: translateY(200px);
+
+    }
+    
+    to {
+        background: linear-gradient(1deg, transparent 5% , $color_dark);
+        transform: translateY(-150px);
+    }
+}
+
+@keyframes slideDownContact1 {
+    from {
+        background: linear-gradient(1deg, transparent 30% , $color_dark);
+        transform: translateY(300px);
+
+    }
+    
+    to {
+        background: linear-gradient(1deg, transparent 10% , $color_light);
+        transform: translateY(0) rotate(162deg);
+    }
+}
+
+@keyframes slideDownContact2 {
+    from {
+        background: linear-gradient(1deg, transparent 30% , $color_dark);
+        transform: translateY(300px) ;
+
+    }
+    
+    to {
+        background: linear-gradient(1deg, transparent 10% , $color_light);
+        transform: translateY(0) rotate(21deg);
     }
 }

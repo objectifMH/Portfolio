@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TetrisComponent } from './tetris/tetris.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr/toastr/toastr.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FontAwesomeModule,
     CarouselModule,
     ReactiveFormsModule,
-    FormsModule
+    HttpClientModule,
+    FormsModule,
+
+    ToastrModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]
