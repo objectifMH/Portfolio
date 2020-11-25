@@ -10,7 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TetrisComponent } from './tetris/tetris.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ToastrModule } from 'ngx-toastr/toastr/toastr.module';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { ToastrModule } from 'ngx-toastr/toastr/toastr.module';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
 
     ToastrModule.forRoot()
 

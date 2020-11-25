@@ -4,7 +4,7 @@ import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import * as AOS from 'aos';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HttpClient } from '@angular/common/http';
-import { ToastrService } from 'ngx-toastr/toastr/toastr.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 
