@@ -546,18 +546,18 @@ main {
             margin-top: 20px;
             margin-bottom: 30px;
 
-            div {
+            .item_competence {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                margin: 10px;
+                margin: 5px;
                 
-                box-shadow: 2px 3px 10px rgba(0,0,0,.25);
+                //box-shadow: 2px 3px 10px rgba(0,0,0,.25);
                 border-radius: 4px;
                 opacity: .8;
-                width: 140px;
-                height: 140px;
+                width: 120px; //140px;
+                height: 120px;//140px;
 
                 display: flex;
                 justify-content: center;
@@ -566,8 +566,8 @@ main {
                 transition: .3s ease-in-out;
                     
                     &:hover {
-                        transform: scale(1.1);
-                        box-shadow: 4px 6px 12px rgba(0,0,0,.75);
+                        transform: scale(1.15);
+                        //box-shadow: 4px 6px 12px rgba(0,0,0,.75);
 
                         .titre {
                             height: 70%;
@@ -584,16 +584,24 @@ main {
                             padding-top: 10px;
                             box-shadow: 2px 3px 10px rgba(0,0,0,.75);
                             text-shadow: 1px 1px 1px black;
+                            display: none;
                         }
 
                         .titre.php_post {
                             font-size: 1.3em;
                         }
+
+                        img { 
+                            width: 100%;
+                            padding: 3px;  
+                            filter: grayscale(0);                
+                        }
                     }
                 
                 img { 
                     width: 100%;
-                    padding: 3px;                  
+                    padding: 3px;  
+                    filter: grayscale(1);                
                 }
 
                 .titre {
@@ -602,14 +610,49 @@ main {
                     opacity: 0;
                     transition: 0.3s ease-in-out;
                     bottom: -40%;
+                    display: none;
                 }
 
                 .java {
-                    padding: 12px 36px;
+                    //padding: 12px 36px;
+                    padding: 0 20px;
                 }
 
                 .css {
-                    padding: 26px 22px !important;
+                    padding: 0px 16px !important;
+                }
+            }
+
+            .item_competence_java {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 5px;            
+                border-radius: 4px;
+                opacity: .8;
+                width: 100px; //140px;
+                height: 100px;//140px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .3s ease-in-out;
+
+                .java {
+                    width: 100%;
+                    padding: 0 20px;
+                    filter: grayscale(1); 
+                }
+
+                p {display: none;
+
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    .java {  
+                        filter: grayscale(0); 
+                    }
                 }
             }
         }
