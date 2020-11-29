@@ -480,7 +480,7 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 50px;
             margin-bottom: 30px;
             
             transform-style: preserve-3d;
@@ -517,16 +517,15 @@ main {
                 &:hover {
                     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
                     background-color: #289cc3;
-                    margin: 60px 10px 0px 10px;
+                    //margin: 1   0px 10px 0px 10px;
                     span { 
-                        color: white;
-                        border-radius: 12px;
-                        border: 6px solid white;
-                        padding: 10px;
-                        transform: rotate(360deg);
+                        color: #fff;
+                        border-radius: 50%;
+                        transform: translateY(-65%) rotate(180deg);
                         background-color: #289cc3;
                         position: relative;
-                        top: -50px;
+                        border: 7px solid white;
+                        font-size: 3.5em;
                     }
                     p {
                         color: white;
@@ -661,6 +660,7 @@ main {
             display: flex;
             justify-content: center;
             flex-direction: column;
+            margin-top: 50px;
 
             div {
                 display: flex;
@@ -698,6 +698,7 @@ main {
             display: flex;
             justify-content: center;
             flex-direction: column;
+            margin-top: 50px;
 
             span {
                 letter-spacing: 1px;
@@ -775,7 +776,7 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 50px;
 
             .realisation {
                 display: flex;
@@ -871,6 +872,7 @@ main {
         }
 
         .container_contact {
+            margin-top: 50px;
             .infos_personnelles {
                 margin-top: 40px;
                 p {
