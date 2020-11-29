@@ -494,7 +494,7 @@ main {
                 box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.35);
                 border-radius: 4px;
                 padding: 20px;
-                margin: 10px;
+                margin: 35px;
                 transition: .3s ease-in-out;
        
                 span {
@@ -542,8 +542,7 @@ main {
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
-            margin-top: 20px;
-            margin-bottom: 30px;
+            margin: 50px 0;
 
             .item_competence {
                 display: flex;
@@ -660,7 +659,7 @@ main {
             display: flex;
             justify-content: center;
             flex-direction: column;
-            margin-top: 50px;
+            margin: 50px 0;
 
             div {
                 display: flex;
@@ -776,7 +775,7 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-top: 50px;
+            margin: 50px 0 0;
 
             .realisation {
                 display: flex;
@@ -973,7 +972,7 @@ main {
                                 p {
                                     width: 190px;
                                     font-size: 1rem;
-                                    letter-spacing: 0.9;
+                                    letter-spacing: 0.9px;
                                     margin: 0 0 0 30px;
                                 }
                 
@@ -1223,8 +1222,7 @@ main {
                 border: red 3px solid !important;
             }
         }
-    }
- 
+    } 
 }
 
 #publication {
@@ -1277,6 +1275,10 @@ main {
             
         }
      }
+}
+
+#realisations {
+    padding: 80px 0px 0px !important;
 }
 
 
@@ -1353,6 +1355,8 @@ footer {
     }
 }
 
+
+
 @media screen and (max-height: 460px) and (min-width: 560px) {
     
     main {
@@ -1377,17 +1381,35 @@ footer {
             }
         }
     }
+}
 
+@media screen and (max-width: 420px) {
+
+    main  .headline_section .container_contact .infos_personnelles  {
+        .contact-info {
+            padding: 2.5em 1.8em;
+
+            p {
+                margin: 0 0 0 10px !important;
+            }
+        }
+
+        .contact-form form {
+            padding: 2.5em 1.8em 60px;
+        }
+    }
 }
 
 @media screen and (min-width: 600px) {
     main { 
-
         .presentation_portrait {
             width: 50% !important;;
         }
         .container_competences {
             flex-direction: row !important;
+            div {
+                margin: 10px !important;
+            }                
         } 
 
         .container_formations {
@@ -1465,6 +1487,7 @@ footer {
     main .headline_section .container_publication span {
         letter-spacing: 0px;
     }
+
     .container_contact {
         .infos_personnelles {
             .form {
@@ -1472,7 +1495,6 @@ footer {
             }
         }
     }
-    
 }
 
 @media screen and (min-width: 875px) {
