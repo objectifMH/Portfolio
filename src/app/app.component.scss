@@ -205,45 +205,14 @@ main {
         padding-top: 100px;
         padding-bottom: 30px;
         background-image: linear-gradient(-360deg, #289bc22b, #279cc4a1), url(../assets/back_5.jpg);
-        min-height: 100%;
+        min-height: 100vh;
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
         letter-spacing: 1px;
         position: relative;
 
-        .button {
-            background-color: white;
-            border: 2px solid #fafafa;
-            padding: .45rem .85rem !important;
-            color: #206894;
-            line-height: 1;
-            outline: none;
-            cursor: pointer;
-            transition: .3s;
-            font-size: 1.1em;
-            margin: 20px auto 0;
-            z-index: 10;
-            
-            a {
-                text-decoration: none;
-                transition: .3s ease-in-out;
-                display: flex;
-                align-items: center;
-                color: #216a98;
-            }
-    
-            &:hover {
-                background-color: transparent;
-                color: $color_text;
-                box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25);
-    
-                a {
-                    color: $color_text;
-                    transform: scale(1) !important;
-                }
-            }
-        }
+        
 
         .container_presentation {
             width: 100%;
@@ -443,6 +412,116 @@ main {
             }
         }
     }
+
+
+    // new infos personnelles //
+    .infos_personnelles {
+        order: 3;
+        margin: 60px auto;
+        border-radius: 11px;
+        padding: 15px 35px;
+        position: relative;
+        overflow: hidden;
+
+        // animations circles
+        .circle {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(10deg, transparent 5% , $color_dark);
+            position: absolute;
+            animation: 20s slideDown infinite;
+            
+
+            &.un {
+                width: 60px;
+                height: 50px;
+                top: 48px;
+                transform: rotate(162deg);
+                animation-delay: 5s;
+                border-radius: 50%;
+            }
+
+            &.deux {
+                width: 40px;
+                height: 40px;
+                top: 252px;
+                right: 39px;
+                transform: rotate(21deg);
+                animation-delay: 10s;
+                border-radius: 50%;
+            }
+
+
+            &.trois {
+                width: 90px;
+                height: 90px;
+                right: 179px;
+                transform: rotate(321deg);
+                animation-delay: 15s;
+                border-radius: 50%;
+            }
+
+        }
+        // fin animations 
+
+        .savoir_plus_me_contacter_container {
+            display: flex;
+            justify-content: flex-end;
+            margin: 10px;
+            z-index: 10;
+
+
+            .button {
+                background-color: white;
+                border: 2px solid #fafafa;
+                font-size: 1.1rem;
+                color: #206894;
+                line-height: 1;
+                outline: none;
+                cursor: pointer;
+                transition: .3s;
+                margin-top: 10px;
+                z-index: 10;
+
+                a {
+                    text-decoration: none;
+                    transition: .3s ease-in-out;
+                    display: flex;
+                    align-items: center;
+                    color: #279cc4;
+                }
+        
+                &:hover {
+                    background-color: transparent;
+                    color: $color_text;
+                    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.35);
+        
+                    a {
+                        color: $color_text;
+                    }
+                }
+            }
+
+            
+        }
+
+        .container_infos_personnelles {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.2em;
+            color: white;
+            padding: 25px 0px 0px;
+
+            h4 {
+                font-size: x-large;
+                line-height: 1.2em;
+                letter-spacing: 0.5px;
+                z-index: 10;
+            }
+        }
+    }
+
+    // Fin new infos personnelles //
   
     .headline_section {
         padding: 80px 0px 40px;
@@ -1397,6 +1476,12 @@ footer {
         .contact-form form {
             padding: 2.5em 1.8em 60px;
         }
+    }
+
+    .infos_personnelles {
+        //padding: 5px !important;
+        //margin: 5px !important;
+        //background-color: purple !important;
     }
 }
 

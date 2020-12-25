@@ -102,28 +102,34 @@
         </div>
       </div>
     </div>
-
-    <div class="infos_personnelles container background_linear ">
-      
-      <span class="circle un" data-aos="zoom-in-up" data-aos-duration="2000"></span>
-      <span class="circle deux" data-aos="zoom-in-up" data-aos-duration="3000"></span>
-      <span class="circle trois" data-aos="zoom-in-up" data-aos-duration="3000"></span>
-
-      
-      <div class="container_infos_personnelles">
-        <h4>
-          En recherche active, je suis disponible et prèt à intégrer une équipe dynamique pour développer des
-          fonctionnalités tant au niveau du back que du front.
-
-        </h4>
-        <div type="submit" class="btn button" >
-          <a [routerLink]="['/main']" fragment="contact">Me contacter</a>
-        </div>
-
-      </div>
-    </div>
   </div>
   <!-- Fin introduction  -->
+
+  <div class="infos_personnelles container background_linear ">
+      
+    <span class="circle un" data-aos="zoom-in-up" data-aos-duration="2000"></span>
+    <span class="circle deux" data-aos="zoom-in-up" data-aos-duration="3000"></span>
+    <span class="circle trois" data-aos="zoom-in-up" data-aos-duration="3000"></span>
+
+    
+    <div class="container_infos_personnelles">
+      <h4>
+        En recherche active, je suis disponible et prèt à intégrer une équipe dynamique pour développer des
+        fonctionnalités tant au niveau du back que du front.
+
+      </h4>
+      <div class="savoir_plus_me_contacter_container">         
+        <div type="submit" class="btn button" >
+          <a [routerLink]="['/main']" fragment="contact">Me contacter
+            <span class="material-icons arrow_right_alt">
+              arrow_right_alt
+            </span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <!-- Compétences  -->
   <div class="headline_section container-fluid background_linear_invisible" id="competences">
