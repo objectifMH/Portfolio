@@ -52,7 +52,7 @@ export class AppComponent {
   }
 
   contactForm: FormGroup;
-  constructor(private fb: FormBuilder, private httpClient: HttpClient,  private toastr: ToastrService) {
+  constructor(private fb: FormBuilder, private httpClient: HttpClient, private toastr: ToastrService) {
     this.contactForm = this.fb.group({
       nom: [''],
       mail: [''],
@@ -79,8 +79,8 @@ export class AppComponent {
   onSubmit() {
     if (this.contactForm.valid) {
 
-      let message =  this.contactForm.value.message + "\n Envoyé du Porfolio. ";
-      
+      let message = this.contactForm.value.message + "\n Envoyé du Porfolio. ";
+
 
       let formData = new FormData();
       formData.append("name", this.contactForm.value.nom);
